@@ -11,5 +11,5 @@ DOMAIN-SUFFIX,agan2.vip
 DOMAIN-SUFFIX,cc.coemn.com
 DOMAIN-SUFFIX,emby.tnx.one
 DOMAIN-SUFFIX,581658.best
-IP-CIDR,104.21.28.238/32 no-resolve
-IP-CIDR,172.67.147.228/32 no-resolve
+IP-CIDR,104.21.28.238/32,no-resolve
+IP-CIDR,172.67.147.228/32,no-resolve
