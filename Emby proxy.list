@@ -1,7 +1,6 @@
 # 内容：Emby Proxy
 # 域名关键字匹配
 DOMAIN-KEYWORD,misakaf
-DOMAIN-KEYWORD,mius
 # 域名后缀匹配
 DOMAIN-SUFFIX,aca.best
 DOMAIN-SUFFIX,stream1.misakaf.org
