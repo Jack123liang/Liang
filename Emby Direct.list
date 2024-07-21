@@ -2,14 +2,13 @@
 # 域名关键字匹配
 DOMAIN-KEYWORD,carryz
 # 域名后缀匹配
-DOMAIN-SUFFIX,yd2.carryz.net
-DOMAIN-SUFFIX,yd1.carryz.net
-DOMAIN-SUFFIX,cdn.lyrebirdemby.com
-DOMAIN-SUFFIX,lt1.carryz.net
-DOMAIN-SUFFIX,lt2.carryz.net
+DOMAIN-SUFFIX,carryz.net
+DOMAIN-SUFFIX,lyrebirdemby.com
+DOMAIN-SUFFIX,carryz.net
+DOMAIN-SUFFIX,carryz.net
 DOMAIN-SUFFIX,agan2.vip
-DOMAIN-SUFFIX,cc.coemn.com
-DOMAIN-SUFFIX,emby.tnx.one
+DOMAIN-SUFFIX,coemn.com
+DOMAIN-SUFFIX,tnx.one
 DOMAIN-SUFFIX,581658.best
 IP-CIDR,104.21.28.238/32,no-resolve
 IP-CIDR,172.67.147.228/32,no-resolve
