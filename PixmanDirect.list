@@ -1,5 +1,6 @@
 # 内容：Pixman Direct
 # 域名后缀匹配
+DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,dnsany.com
 DOMAIN-SUFFIX,cmvideo.cn
 DOMAIN-SUFFIX,chinamobile.com
