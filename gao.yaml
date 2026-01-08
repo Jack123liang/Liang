@@ -1,0 +1,555 @@
+---
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: true
+ipv6: false
+mode: rule
+log-level: warning
+proxy-providers:
+  一分机场:
+    type: http
+    url: https://www.yfjc.xyz/api/v1/client/subscribe?token=203ef91fddbb490bef4afbc5fe33fe3e
+    interval: 86400
+    path: "/etc/openclash/proxy_provider/yifen.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+proxy-groups:
+- name: 手动选择
+  type: select
+  use:
+  - 一分机场
+  filter: ".*"
+- name: 自动选择
+  type: url-test
+  use:
+  - 一分机场
+  filter: ".*([^0-9]|^)0\\.1([^0-9]|$)"
+  url: http://www.gstatic.com/generate_204
+  interval: 120
+  tolerance: 50
+- name: 选择代理
+  type: select
+  proxies:
+  - 自动选择
+  - 手动选择
+  - HK 香港
+  - US 美国
+  - JP 日本
+  - SG 新加坡
+  - TW 台湾
+  - DIRECT
+- name: Sntp
+  type: select
+  proxies:
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+- name: 非越
+  type: select
+  proxies:
+  - DIRECT
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+- name: 飞跃彩虹
+  type: select
+  proxies:
+  - DIRECT
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+  - TW 台湾
+- name: CC
+  type: select
+  proxies:
+  - DIRECT
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+- name: 纸片人小站
+  type: select
+  proxies:
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - SG 新加坡
+  - US 美国
+  - NL 荷兰
+  - TW 台湾
+- name: 琴鸟
+  type: select
+  hidden: true
+  proxies:
+  - DIRECT
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+  - TW 台湾
+- name: 喜鹊
+  type: select
+  hidden: true
+  proxies:
+  - DIRECT
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+- name: Nanflix-US
+  type: select
+  hidden: true
+  proxies:
+  - DIRECT
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+- name: Apple
+  type: select
+  proxies:
+  - DIRECT
+- name: AI
+  type: select
+  use:
+  - 一分机场
+  filter: "(新加坡|美国|SG|US)(?!.*0\\.1)"
+  proxies:
+  - 手动选择
+- name: Google
+  type: select
+  proxies:
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+- name: YouTube
+  type: select
+  proxies:
+  - 选择代理
+  - 自动选择
+  - 手动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+- name: TVB
+  type: select
+  proxies:
+  - HK 香港
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - DIRECT
+- name: Pixman Proxy
+  type: select
+  proxies:
+  - 自动选择
+  - 选择代理
+  - 手动选择
+- name: Pixman Direct
+  type: select
+  proxies:
+  - DIRECT
+- name: Telegram
+  type: select
+  proxies:
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+- name: X
+  type: select
+  proxies:
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+- name: Netflix
+  type: select
+  proxies:
+  - 选择代理
+  - 手动选择
+  - 自动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+  - DIRECT
+- name: Disney+
+  type: select
+  proxies:
+  - 自动选择
+  - 手动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - NL 荷兰
+  - DIRECT
+- name: Spotify
+  type: select
+  proxies:
+  - DIRECT
+  - 自动选择
+  - 手动选择
+  - NL 荷兰
+  - HK 香港
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - TW 台湾
+- name: Github
+  type: select
+  proxies:
+  - 选择代理
+- name: Speedtest
+  type: select
+  proxies:
+  - 自动选择
+  - 手动选择
+  - HK 香港
+  - TW 台湾
+  - SG 新加坡
+  - JP 日本
+  - US 美国
+  - DIRECT
+- name: 漏网之鱼
+  type: select
+  proxies:
+  - 选择代理
+  - DIRECT
+- name: HK 香港
+  type: url-test
+  use:
+  - 一分机场
+  filter: "(澳门|\U0001F1F2\U0001F1F4|港|\U0001F1ED\U0001F1F0|HK|Hong).*([^0-9]|^)0\\.1([^0-9]|$)"
+  interval: 120
+  tolerance: 50
+  lazy: true
+- name: US 美国
+  type: url-test
+  use:
+  - 一分机场
+  filter: "(美国|US|United States|\U0001F1FA\U0001F1F8|L\\.A|San Jose).*([^0-9]|^)0\\.1([^0-9]|$)"
+  interval: 120
+  tolerance: 50
+  lazy: true
+- name: JP 日本
+  type: url-test
+  use:
+  - 一分机场
+  filter: "(日本|JP|Japan|\U0001F1EF\U0001F1F5|东京|大阪|Tokyo|Osaka).*([^0-9]|^)0\\.1([^0-9]|$)"
+  interval: 120
+  tolerance: 50
+  lazy: true
+- name: NL 荷兰
+  type: url-test
+  use:
+  - 一分机场
+  filter: "(荷兰|NL|Netherlands|\U0001F1F3\U0001F1F1|阿姆斯特丹|Amsterdam).*([^0-9]|^)0\\.1([^0-9]|$)"
+  interval: 120
+  tolerance: 50
+  lazy: true
+- name: SG 新加坡
+  type: url-test
+  use:
+  - 一分机场
+  filter: "新加坡|SG|Singapore|\U0001F1F8\U0001F1EC|狮城"
+  interval: 120
+  tolerance: 50
+  lazy: true
+- name: TW 台湾
+  type: url-test
+  use:
+  - 一分机场
+  filter: 台湾|TW|Taiwan|台北|Taipei
+  interval: 120
+  tolerance: 50
+  lazy: true
+rule-providers:
+  Sntp:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/Sntp.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Sntp.list
+  FeiyueChat:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/FeiyueChat.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/FeiyueChat.list
+  feiyuecaihong:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/Feiyuecaihong.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Feiyuecaihong.list
+  CC:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/CC.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/CC.list
+  Embyplus:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/Embyplus.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Embyplus.list
+  Lyrebird:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/Lyrebird.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Lyrebird.list
+  Magpie:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/Magpie.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Magpie.list
+  Nanflix-US:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/Nanflix-US.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Nanflix-US.list
+  Telegram:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: "/etc/openclash/rule_provider/Telegram.yaml"
+    url: https://clashios.app/static/rules/telegram-classical-set.yaml
+  AI:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/AI.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/AI.list
+  Pixman Direct:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/PixmanDirect.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/PixmanDirect.list
+  Pixman Proxy:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/PixmanProxy.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/PixmanProxy.list
+  TVB:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "/etc/openclash/rule_provider/TVB.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/TVB.list
+rules:
+- RULE-SET,Sntp,Sntp
+- RULE-SET,FeiyueChat,非越
+- RULE-SET,feiyuecaihong,飞跃彩虹
+- RULE-SET,CC,CC
+- RULE-SET,Embyplus,纸片人小站
+- RULE-SET,Lyrebird,琴鸟
+- RULE-SET,Magpie,喜鹊
+- RULE-SET,Nanflix-US,Nanflix-US
+- GEOSITE,bilibili,DIRECT
+- GEOSITE,netflix,Netflix
+- GEOSITE,disney,Disney+
+- GEOSITE,spotify,Spotify
+- RULE-SET,AI,AI
+- RULE-SET,TVB,TVB
+- RULE-SET,Pixman Direct,Pixman Direct
+- RULE-SET,Pixman Proxy,Pixman Proxy
+- GEOSITE,speedtest,Speedtest
+- GEOSITE,github,选择代理
+- RULE-SET,Telegram,Telegram
+- GEOSITE,youtube,YouTube
+- GEOSITE,google,Google
+- GEOSITE,twitter,X
+- GEOSITE,steam@cn,DIRECT
+- GEOSITE,steam,选择代理
+- GEOSITE,apple,Apple
+- GEOIP,LAN,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,漏网之鱼
+dns:
+  enable: true
+  listen: 0.0.0.0:7874
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+  - 114.114.115.115
+  - 119.28.28.28
+  - 223.6.6.6
+  - 114.114.114.114
+  - 119.29.29.29
+  - 223.5.5.5
+  nameserver:
+  - 114.114.114.114
+  - 119.29.29.29
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  respect-rules: false
+  fake-ip-filter:
+  - geosite:cn
+  fallback:
+  - 8.8.8.8
+  - 8.8.4.4
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+    - 0.0.0.0/8
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 127.0.0.0/8
+    - 169.254.0.0/16
+    - 172.16.0.0/12
+    - 192.0.0.0/24
+    - 192.0.2.0/24
+    - 192.88.99.0/24
+    - 192.168.0.0/16
+    - 198.18.0.0/15
+    - 198.51.100.0/24
+    - 203.0.113.0/24
+    - 224.0.0.0/4
+    - 240.0.0.0/4
+    - 255.255.255.255/32
+    domain:
+    - "+.google.com"
+    - "+.facebook.com"
+    - "+.youtube.com"
+    - "+.githubusercontent.com"
+    - "+.googlevideo.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+tproxy-port: 7895
+external-controller: 0.0.0.0:9090
+secret: FpVpys5Q
+bind-address: "*"
+external-ui: "/usr/share/openclash/ui"
+external-ui-name: metacubexd
+external-ui-url: https://codeload.github.com/MetaCubeX/metacubexd/zip/refs/heads/gh-pages
+keep-alive-interval: 15
+keep-alive-idle: 600
+tcp-concurrent: true
+geox-url:
+  mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb
+  geosite: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
+  asn: https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb
+sniffer:
+  enable: true
+  override-destination: true
+  sniff:
+    QUIC:
+      ports:
+      - 443
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+  force-domain:
+  - "+.netflix.com"
+  - "+.nflxvideo.net"
+  - "+.amazonaws.com"
+  - "+.media.dssott.com"
+  skip-domain:
+  - Mijia Cloud
+  - dlg.io.mi.com
+  - "+.oray.com"
+  - "+.sunlogin.net"
+  - "+.push.apple.com"
+  parse-pure-ip: true
+profile:
+  store-selected: true
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
+  write-to-system: true
+authentication:
+- Clash:CLITwgkP
