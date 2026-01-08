@@ -1,0 +1,139 @@
+# OpenClash 修复版 - 解决规则失效问题
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: true
+mode: rule
+log-level: info # 调高日志等级，方便排查规则为何不匹配
+ipv6: false
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver: [114.114.115.115, 223.6.6.6]
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - https://1.12.12.12/dns-query
+
+proxy-providers:
+  一分机场:
+    type: http
+    url: https://www.yfjc.xyz/api/v1/client/subscribe?token=203ef91fddbb490bef4afbc5fe33fe3e
+    interval: 86400
+    path: /etc/openclash/proxy_provider/yifen.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+proxy-groups:
+  - name: 选择代理
+    type: select
+    proxies: [自动选择, 手动选择, HK 香港, US 美国, JP 日本, TW 台湾, SG 新加坡, NL 荷兰, DIRECT]
+
+  - name: 手动选择
+    type: select
+    use: [一分机场]
+
+  - name: 自动选择
+    type: url-test
+    use: [一分机场]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: AI
+    type: select
+    use: [一分机场]
+    filter: '(新加坡|美国|SG|US)'
+    proxies: [手动选择]
+
+  - name: YouTube
+    type: select
+    proxies: [选择代理, 自动选择, HK 香港, US 美国, SG 新加坡]
+
+  - name: Telegram
+    type: select
+    proxies: [选择代理, 自动选择, HK 香港, SG 新加坡, US 美国]
+
+  - name: Netflix
+    type: select
+    proxies: [选择代理, HK 香港, SG 新加坡, US 美国, DIRECT]
+
+  - name: Apple
+    type: select
+    proxies: [DIRECT, 选择代理]
+
+  - name: 漏网之鱼
+    type: select
+    proxies: [选择代理, DIRECT]
+
+  # 地区分组
+  - name: HK 香港
+    type: url-test
+    use: [一分机场]
+    filter: "港|🇭🇰|HK|Hong"
+    interval: 300
+  - name: US 美国
+    type: url-test
+    use: [一分机场]
+    filter: "美|🇺🇸|US|United States"
+    interval: 300
+  - name: JP 日本
+    type: url-test
+    use: [一分机场]
+    filter: "日|🇯🇵|JP|Japan"
+    interval: 300
+  - name: SG 新加坡
+    type: url-test
+    use: [一分机场]
+    filter: "新|🇸🇬|SG|Singapore"
+    interval: 300
+  - name: TW 台湾
+    type: url-test
+    use: [一分机场]
+    filter: "台|🇹🇼|TW|Taiwan"
+    interval: 300
+  - name: NL 荷兰
+    type: url-test
+    use: [一分机场]
+    filter: "荷|🇳🇱|NL|Netherlands"
+    interval: 300
+
+rule-providers:
+  AI:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/AI.list
+    path: /etc/openclash/rule_provider/ai.list
+    interval: 86400
+  Sntp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Sntp.list
+    path: /etc/openclash/rule_provider/sntp.list
+    interval: 86400
+
+rules:
+  # 1. 基础局域网直连
+  - GEOIP,LAN,DIRECT
+  
+  # 2. 核心 Rule-Set (如果下载失败，流量会跳过此处向下匹配)
+  - RULE-SET,AI,AI
+  - RULE-SET,Sntp,选择代理
+
+  # 3. GEOSITE 规则 (Meta/Mihomo 内核自带，最稳)
+  - GEOSITE,youtube,YouTube
+  - GEOSITE,netflix,Netflix
+  - GEOSITE,telegram,Telegram
+  - GEOSITE,google,选择代理
+  - GEOSITE,apple,Apple
+  - GEOSITE,github,选择代理
+  
+  # 4. 国内直连
+  - GEOSITE,cn,DIRECT
+  - GEOIP,CN,DIRECT
+  
+  # 5. 兜底
+  - MATCH,漏网之鱼
