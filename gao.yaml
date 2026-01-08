@@ -38,9 +38,10 @@ proxy-groups:
   - 📍 手动选择
   - 🇭🇰 HK 香港
   - 🇺🇲 US 美国
-  - JP 日本
-  - SG 新加坡
-  - TW 台湾
+  - 🇯🇵 JP 日本
+  - 🇳🇱 NL 荷兰
+  - 🇸🇬 SG 新加坡
+  - 🇨🇳 TW 台湾
   - DIRECT
 - name: Sntp
   type: select
@@ -49,11 +50,11 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
 - name: 非越
   type: select
   proxies:
@@ -62,11 +63,11 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
 - name: 飞跃彩虹
   type: select
   proxies:
@@ -75,11 +76,11 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - SG 新加坡
-  - JP 日本
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
-  - TW 台湾
+  - 🇳🇱 NL 荷兰
+  - 🇨🇳 TW 台湾
 - name: CC
   type: select
   proxies:
@@ -88,11 +89,11 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
 - name: 纸片人小站
   type: select
   proxies:
@@ -100,10 +101,10 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - SG 新加坡
+  - 🇸🇬 SG 新加坡
   - 🇺🇲 US 美国
-  - NL 荷兰
-  - TW 台湾
+  - 🇳🇱 NL 荷兰
+  - 🇨🇳 TW 台湾
 - name: 琴鸟
   type: select
   hidden: true
@@ -113,11 +114,11 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - SG 新加坡
-  - JP 日本
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
-  - TW 台湾
+  - 🇳🇱 NL 荷兰
+  - 🇨🇳 TW 台湾
 - name: 喜鹊
   type: select
   hidden: true
@@ -127,11 +128,11 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
 - name: Nanflix-US
   type: select
   hidden: true
@@ -141,11 +142,11 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
 - name: Apple
   type: select
   proxies:
@@ -164,11 +165,11 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
 - name: YouTube
   type: select
   proxies:
@@ -176,11 +177,11 @@ proxy-groups:
   - ⚡ 自动选择
   - 📍 手动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
 - name: TVB
   type: select
   proxies:
@@ -203,14 +204,14 @@ proxy-groups:
   type: select
   proxies:
   - 🚀 选择代理
-  - 📍 手动选择
+  - 📍 手动选择h
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
 - name: X
   type: select
   proxies:
@@ -218,11 +219,11 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
 - name: Netflix
   type: select
   proxies:
@@ -230,11 +231,11 @@ proxy-groups:
   - 📍 手动选择
   - ⚡ 自动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
   - DIRECT
 - name: Disney+
   type: select
@@ -242,11 +243,11 @@ proxy-groups:
   - ⚡ 自动选择
   - 📍 手动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
   - DIRECT
 - name: Spotify
   type: select
@@ -254,12 +255,12 @@ proxy-groups:
   - DIRECT
   - ⚡ 自动选择
   - 📍 手动选择
-  - NL 荷兰
+  - 🇳🇱 NL 荷兰
   - 🇭🇰 HK 香港
-  - SG 新加坡
-  - JP 日本
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
-  - TW 台湾
+  - 🇨🇳 TW 台湾
 - name: Github
   type: select
   proxies:
@@ -270,9 +271,9 @@ proxy-groups:
   - ⚡ 自动选择
   - 📍 手动选择
   - 🇭🇰 HK 香港
-  - TW 台湾
-  - SG 新加坡
-  - JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
+  - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
   - DIRECT
 - name: 🐟 漏网之鱼
@@ -316,7 +317,7 @@ proxy-groups:
   type: url-test
   use:
   - 一分机场
-  filter: "新加坡|SG|Singapore|\U0001F1F8\U0001F1EC|狮城"
+  filter: "(新加坡|SG|Singapore|\U0001F1F8\U0001F1EC|狮城)"
   interval: 120
   tolerance: 50
   lazy: true
@@ -324,7 +325,7 @@ proxy-groups:
   type: url-test
   use:
   - 一分机场
-  filter: 台湾|TW|Taiwan|台北|Taipei
+  filter: "(台湾|TW|Taiwan|台北|Taipei)"
   interval: 120
   tolerance: 50
   lazy: true
