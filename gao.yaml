@@ -18,12 +18,12 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 proxy-groups:
-- name: 📍手动选择
+- name: 📍 手动选择
   type: select
   use:
   - 一分机场
   filter: ".*"
-- name: ⚡自动选择
+- name: ⚡ 自动选择
   type: url-test
   use:
   - 一分机场
@@ -31,13 +31,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 120
   tolerance: 50
-- name: 🚀选择代理
+- name: 🚀 选择代理
   type: select
   proxies:
-  - 自动选择
-  - 手动选择
-  - HK 香港
-  - US 美国
+  - ⚡ 自动选择
+  - 📍 手动选择
+  - 🇭🇰 HK 香港
+  - 🇺🇲 US 美国
   - JP 日本
   - SG 新加坡
   - TW 台湾
@@ -45,63 +45,63 @@ proxy-groups:
 - name: Sntp
   type: select
   proxies:
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
 - name: 非越
   type: select
   proxies:
   - DIRECT
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
 - name: 飞跃彩虹
   type: select
   proxies:
   - DIRECT
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
   - TW 台湾
 - name: CC
   type: select
   proxies:
   - DIRECT
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
 - name: 纸片人小站
   type: select
   proxies:
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - SG 新加坡
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
   - TW 台湾
 - name: 琴鸟
@@ -109,13 +109,13 @@ proxy-groups:
   hidden: true
   proxies:
   - DIRECT
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
   - TW 台湾
 - name: 喜鹊
@@ -123,28 +123,28 @@ proxy-groups:
   hidden: true
   proxies:
   - DIRECT
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
 - name: Nanflix-US
   type: select
   hidden: true
   proxies:
   - DIRECT
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
 - name: Apple
   type: select
@@ -156,45 +156,45 @@ proxy-groups:
   - 一分机场
   filter: "(新加坡|美国|SG|US)(?!.*0\\.1)"
   proxies:
-  - 手动选择
+  - 📍 手动选择
 - name: Google
   type: select
   proxies:
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
 - name: YouTube
   type: select
   proxies:
-  - 选择代理
-  - 自动选择
-  - 手动选择
-  - HK 香港
+  - 🚀 选择代理
+  - ⚡ 自动选择
+  - 📍 手动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
 - name: TVB
   type: select
   proxies:
-  - HK 香港
-  - 选择代理
-  - 手动选择
-  - 自动选择
+  - 🇭🇰 HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
   - DIRECT
 - name: Pixman Proxy
   type: select
   proxies:
-  - 自动选择
-  - 选择代理
-  - 手动选择
+  - ⚡ 自动选择
+  - 🚀 选择代理
+  - 📍 手动选择
 - name: Pixman Direct
   type: select
   proxies:
@@ -202,85 +202,85 @@ proxy-groups:
 - name: Telegram
   type: select
   proxies:
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
 - name: X
   type: select
   proxies:
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
 - name: Netflix
   type: select
   proxies:
-  - 选择代理
-  - 手动选择
-  - 自动选择
-  - HK 香港
+  - 🚀 选择代理
+  - 📍 手动选择
+  - ⚡ 自动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
   - DIRECT
 - name: Disney+
   type: select
   proxies:
-  - 自动选择
-  - 手动选择
-  - HK 香港
+  - ⚡ 自动选择
+  - 📍 手动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - NL 荷兰
   - DIRECT
 - name: Spotify
   type: select
   proxies:
   - DIRECT
-  - 自动选择
-  - 手动选择
+  - ⚡ 自动选择
+  - 📍 手动选择
   - NL 荷兰
-  - HK 香港
+  - 🇭🇰 HK 香港
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - TW 台湾
 - name: Github
   type: select
   proxies:
-  - 选择代理
+  - 🚀 选择代理
 - name: Speedtest
   type: select
   proxies:
-  - 自动选择
-  - 手动选择
-  - HK 香港
+  - ⚡ 自动选择
+  - 📍 手动选择
+  - 🇭🇰 HK 香港
   - TW 台湾
   - SG 新加坡
   - JP 日本
-  - US 美国
+  - 🇺🇲 US 美国
   - DIRECT
-- name: 漏网之鱼
+- name: 🐟 漏网之鱼
   type: select
   proxies:
-  - 选择代理
+  - 🚀 选择代理
   - DIRECT
-- name: HK 香港
+- name: 🇭🇰 HK 香港
   type: url-test
   use:
   - 一分机场
@@ -288,7 +288,7 @@ proxy-groups:
   interval: 120
   tolerance: 50
   lazy: true
-- name: US 美国
+- name: 🇺🇲 US 美国
   type: url-test
   use:
   - 一分机场
@@ -296,7 +296,7 @@ proxy-groups:
   interval: 120
   tolerance: 50
   lazy: true
-- name: JP 日本
+- name: 🇯🇵 JP 日本
   type: url-test
   use:
   - 一分机场
@@ -304,7 +304,7 @@ proxy-groups:
   interval: 120
   tolerance: 50
   lazy: true
-- name: NL 荷兰
+- name: 🇳🇱 NL 荷兰
   type: url-test
   use:
   - 一分机场
@@ -312,7 +312,7 @@ proxy-groups:
   interval: 120
   tolerance: 50
   lazy: true
-- name: SG 新加坡
+- name: 🇸🇬 SG 新加坡
   type: url-test
   use:
   - 一分机场
@@ -320,7 +320,7 @@ proxy-groups:
   interval: 120
   tolerance: 50
   lazy: true
-- name: TW 台湾
+- name: 🇨🇳 TW 台湾
   type: url-test
   use:
   - 一分机场
@@ -438,13 +438,13 @@ rules:
 - RULE-SET,Pixman Direct,Pixman Direct
 - RULE-SET,Pixman Proxy,Pixman Proxy
 - GEOSITE,speedtest,Speedtest
-- GEOSITE,github,选择代理
+- GEOSITE,github,🚀 选择代理
 - RULE-SET,Telegram,Telegram
 - GEOSITE,youtube,YouTube
 - GEOSITE,google,Google
 - GEOSITE,twitter,X
 - GEOSITE,steam@cn,DIRECT
-- GEOSITE,steam,选择代理
+- GEOSITE,steam,🚀 选择代理
 - GEOSITE,apple,Apple
 - GEOIP,LAN,DIRECT
 - GEOIP,CN,DIRECT
