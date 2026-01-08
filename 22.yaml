@@ -25,55 +25,7 @@ proxy-providers:
 # Proxy Groups
 ############################
 proxy-groups:
-  # ===== 地区分组（必须最先）=====
-  - name: HK 香港
-    type: url-test
-    use: [一分机场]
-    filter: "澳门|🇲🇴|港|🇭🇰|HK|Hong"
-    interval: 120
-    tolerance: 50
-    lazy: true
-
-  - name: US 美国
-    type: url-test
-    use: [一分机场]
-    filter: "美国|US|United States|🇺🇸|L\\.A|San Jose"
-    interval: 120
-    tolerance: 50
-    lazy: true
-
-  - name: JP 日本
-    type: url-test
-    use: [一分机场]
-    filter: "日本|JP|Japan|🇯🇵|东京|大阪|Tokyo|Osaka"
-    interval: 120
-    tolerance: 50
-    lazy: true
-
-  - name: NL 荷兰
-    type: url-test
-    use: [一分机场]
-    filter: "荷兰|NL|Netherlands|🇳🇱|阿姆斯特丹|Amsterdam"
-    interval: 120
-    tolerance: 50
-    lazy: true
-
-  - name: SG 新加坡
-    type: url-test
-    use: [一分机场]
-    filter: "新加坡|SG|Singapore|🇸🇬|狮城"
-    interval: 120
-    tolerance: 50
-    lazy: true
-
-  - name: TW 台湾
-    type: url-test
-    use: [一分机场]
-    filter: "台湾|TW|Taiwan|台北|Taipei"
-    interval: 120
-    tolerance: 50
-    lazy: true
-
+ 
   # ===== 功能分组 =====
   - name: 手动选择
     type: select
@@ -194,6 +146,55 @@ proxy-groups:
   - name: 漏网之鱼
     type: select
     proxies: [选择代理, DIRECT]
+     # ===== 地区分组（必须最先）=====
+     
+  - name: HK 香港
+    type: url-test
+    use: [一分机场]
+    filter: "澳门.*0\.1|🇲🇴.*0\.1|港.*0\.1|🇭🇰.*0\.1|HK.*0\.1|Hong.*0\.1|hong.*0\.1"
+    interval: 120
+    tolerance: 50
+    lazy: true
+
+  - name: US 美国
+    type: url-test
+    use: [一分机场]
+    filter: "美国.*0\.1|US.*0\.1|United States.*0\.1|🇺🇸.*0\.1|L\.A.*0\.1|San Jose.*0\.1e"
+    interval: 120
+    tolerance: 50
+    lazy: true
+
+  - name: JP 日本
+    type: url-test
+    use: [一分机场]
+    filter: "日本.*0\.1|JP.*0\.1|Japan.*0\.1|🇯🇵.*0\.1|东京.*0\.1|大阪.*0\.1|Tokyo.*0\.1|Osaka.*0\.1 "
+    interval: 120
+    tolerance: 50
+    lazy: true
+
+  - name: NL 荷兰
+    type: url-test
+    use: [一分机场]
+    filter: "荷兰.*0\.1|NL.*0\.1|Netherlands.*0\.1|🇳🇱.*0\.1|阿姆斯特丹.*0\.1|Amsterdam.*0\.1"
+    interval: 120
+    tolerance: 50
+    lazy: true
+
+  - name: SG 新加坡
+    type: url-test
+    use: [一分机场]
+    filter: "新加坡|SG|Singapore|🇸🇬|狮城"
+    interval: 120
+    tolerance: 50
+    lazy: true
+
+  - name: TW 台湾
+    type: url-test
+    use: [一分机场]
+    filter: "台湾|TW|Taiwan|台北|Taipei"
+    interval: 120
+    tolerance: 50
+    lazy: true
 
 ############################
 # Rule Providers
