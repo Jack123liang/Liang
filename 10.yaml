@@ -1,0 +1,1279 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - {name: 日本专线-0.1x, server: 203.10.98.187, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 日本专线2-0.1x, server: 203.10.99.211, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 日本专线3-0.1x, server: 203.10.99.211, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 日本专线4, server: 46.232.56.147, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 日本专线5, server: 46.232.56.147, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 日本专线6, server: 138.2.2.120, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 美国洛杉矶专线-0.1x, server: 108.181.22.153, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 美国洛杉矶专线2-0.1x, server: 108.181.23.241, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 美国洛杉矶专线3-0.1x, server: 108.181.23.249, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 美国洛杉矶专线4-0.1x, server: 108.181.23.255, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 美国洛杉矶专线5-0.1x, server: 205.178.182.55, port: 443, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坡专线, server: 203.27.106.139, port: 50000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 50000-55000, udp: true}
+  - {name: 新加坡专线2, server: 203.27.106.139, port: 50000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 50000-55000, udp: true}
+  - {name: 新加坡专线3, server: 203.27.106.139, port: 50000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 50000-55000, udp: true}
+  - {name: 新加坡专线4, server: 168.138.184.187, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 美国堪萨斯专线1-0.1x, server: 192.151.146.155, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 荷兰专线, server: 204.10.194.86, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 香港专线1-0.1x, server: 103.197.71.99, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 香港专线2-0.1x, server: 103.197.71.100, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 香港专线3-0.1x, server: 103.197.71.101, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 香港专线4-0.1x, server: 103.197.71.102, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 香港专线5-0.1x, server: 103.197.71.103, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 巴西专线, server: 129.148.39.249, port: 20000, type: hysteria2, password: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, auth: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, sni: www.bing.com, skip-cert-verify: true, ports: 20000-55000, udp: true}
+  - {name: 日本三网专线1号, server: 3bd9.55dca.e048.f1-fef1f.yfjcs.com, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: egq3FRi4oqkJ-iJ40r-pk10g7tawGg6o9c4UDGOPDU4, short-id: 9824e11ad3a632f8}, servername: osxapps.itunes.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 日本三网专线2号, server: 3bd9.55dca.e048.f1-fef1f.yfjcs.com, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: egq3FRi4oqkJ-iJ40r-pk10g7tawGg6o9c4UDGOPDU4, short-id: 9824e11ad3a632f8}, servername: osxapps.itunes.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 日本三网专线3号, server: 3bd9.55dca.e048.f1-fef1f.yfjcs.com, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: egq3FRi4oqkJ-iJ40r-pk10g7tawGg6o9c4UDGOPDU4, short-id: 9824e11ad3a632f8}, servername: osxapps.itunes.apple.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 日本 | 移动专属1号-0.1x, server: 3bd9.55dca.e048.f6-fef1f.yfjcs.com, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: OpOPkgvdODyl87_5Yd4gJlaSD1Bc10TVjLlzKNHx40k, short-id: 5ab35065}, servername: osxapps.itunes.apple.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 日本 | 移动专属2号-0.1x, server: 3bd9.55dca.e048.f6-fef1f.yfjcs.com, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: OpOPkgvdODyl87_5Yd4gJlaSD1Bc10TVjLlzKNHx40k, short-id: 5ab35065}, servername: osxapps.itunes.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 日本 | 移动专属3号-0.1x, server: 3bd9.55dca.e048.f6-fef1f.yfjcs.com, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: OpOPkgvdODyl87_5Yd4gJlaSD1Bc10TVjLlzKNHx40k, short-id: 5ab35065}, servername: osxapps.itunes.apple.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 日本 | 移动专属4号-0.1x, server: 3bd9.55dca.e048.f7-fef1f.yfjcs.com, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: SMnrjqT7vDwVYRL05E6qgSFkNpEyLpyZtWMHvhHr9BM, short-id: ab2909fe}, servername: updates.cdn-apple.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 日本 | 移动专属5号-0.1x, server: 3bd9.55dca.e048.f7-fef1f.yfjcs.com, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: SMnrjqT7vDwVYRL05E6qgSFkNpEyLpyZtWMHvhHr9BM, short-id: ab2909fe}, servername: updates.cdn-apple.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 日本 | 移动专属6号-0.1x, server: 3bd9.55dca.e048.f7-fef1f.yfjcs.com, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: SMnrjqT7vDwVYRL05E6qgSFkNpEyLpyZtWMHvhHr9BM, short-id: ab2909fe}, servername: updates.cdn-apple.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 荷兰| BT下载-0.1x, server: 204.10.194.78, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: 9xhRQRC70QdPgNlgB1rLvT382AiRlFi_cEkCAK2BcjI, short-id: b5e2e30a}, servername: iosapps.itunes.apple.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 荷兰2 | BT下载-0.1x, server: 63.141.128.173, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: nl1n.yfjc.sbs, client-fingerprint: ios, network: ws, ws-opts: {path: /yfjc/knl1, headers: {Host: nl1n1.yfjc.sbs}}, udp: true}
+  - {name: 台湾, server: 3bd9.55dba.e048.f65-fef1f.yfjcs.com, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: N6xp9sw9ALhLxOtVRt_8PNI2e2q1vf0Ay6MaoP3l6Hw, short-id: be823fa3}, servername: cdn-dynmedia-1.microsoft.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 法国巴黎2, server: 141.253.124.138, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: gkl6bqL44xulia53I8gd_BtiVRzU1rsIu4WeffywLBY, short-id: 78f5a5a5}, servername: tv.apple.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 法国马赛, server: 144.24.206.147, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: cu2H4WP9LU3ZdD85MNr8w4jUS79Wx6YVUxVeRGVBQyc, short-id: be05a235}, servername: tv.apple.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 荷兰阿姆斯特丹, server: 158.101.195.118, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: BU86Bh8IfiMcQllCNU2sFi4z1GfpPOaTxCepPpNmgC4, short-id: 710e95ee}, servername: tv.apple.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 美国圣何塞, server: 192.9.142.185, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: 1utdJ0YWFpPYbH-bfIkfGgSebhByfttArVtO9iSlwFM, short-id: 30194285}, servername: www.mi.com, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 美国圣何塞2, server: 165.1.68.155, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: 48Fc8APUOtIJDFrpdULD7Sr7Z7NVp_0K1H9u4LcmfmE, short-id: 67fed015}, servername: www.mi.com, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 英国伦敦, server: 140.238.101.15, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: bup-dr56at91n37SQwAMnsNtcmk44UQBGCYN8hkU0nQ, short-id: 903a1801}, servername: buylite.music.apple.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 英国伦敦2, server: 193.123.187.39, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: i7DUE1GbZSybS9hVNoLXkNBUOhy_428gM8v5fKfjS0Q, short-id: 375cd304}, servername: buylite.music.apple.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 德国法兰克福, server: 141.147.33.180, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, flow: xtls-rprx-vision, skip-cert-verify: true, reality-opts: {public-key: CxZKPoPJmBg2SSXYFRoasAPw-f_ESjRxr1fySPgrG3g, short-id: e3a0f28a}, servername: music.apple.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 日本, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjc-jp-311.yfjc.sbs, client-fingerprint: ios, network: ws, ws-opts: {path: /yfjc/jp1, headers: {Host: yfjc-jp-311.yfjc.sbs}}, udp: true}
+  - {name: 日本2, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjc-jp-311.yfjc.sbs, client-fingerprint: safari, network: ws, ws-opts: {path: /yfjc/jp1, headers: {Host: yfjc-jp-311.yfjc.sbs}}, udp: true}
+  - {name: 美国1号-0.1x, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjc-us-311.yfjc.sbs, client-fingerprint: safari, network: ws, ws-opts: {path: /yfjc/us1, headers: {Host: yfjc-us-311.yfjc.sbs}}, udp: true}
+  - {name: 美国2号-0.1x, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjcus1-311.yfjc.sbs, client-fingerprint: safari, network: ws, ws-opts: {path: /yfjc/us2, headers: {Host: yfjcus1-311.yfjc.sbs}}, udp: true}
+  - {name: 美国3号-0.1x, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjcus-311.yfjc.sbs, client-fingerprint: ios, network: ws, ws-opts: {path: /yfjc/us3, headers: {Host: yfjcus-311.yfjc.sbs}}, udp: true}
+  - {name: 日本1号-0.1x, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjcjp2-312.yfjc.sbs, client-fingerprint: ios, network: ws, ws-opts: {path: /yfjc/jp, headers: {Host: yfjc-jp2-312.yfjc.sbs}}, udp: true}
+  - {name: 日本2号-0.1x, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjcjp2-312.yfjc.sbs, client-fingerprint: chrome, network: ws, ws-opts: {path: /yfjc/jp, headers: {Host: yfjc-jp2-312.yfjc.sbs}}, udp: true}
+  - {name: 日本3号-0.1x, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjcjp2-312.yfjc.sbs, client-fingerprint: chrome, network: ws, ws-opts: {path: /yfjc/jp, headers: {Host: yfjc-jp2-312.yfjc.sbs}}, udp: true}
+  - {name: 日本4号-0.1x, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjcjp3-312.yfjc.sbs, client-fingerprint: chrome, network: ws, ws-opts: {path: /yfjc/jp, headers: {Host: yfjc-jp3-312.yfjc.sbs}}, udp: true}
+  - {name: 日本5号-0.1x, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjcjp3-312.yfjc.sbs, client-fingerprint: chrome, network: ws, ws-opts: {path: /yfjc/jp, headers: {Host: yfjc-jp3-312.yfjc.sbs}}, udp: true}
+  - {name: 日本6号-0.1x, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjcjp3-312.yfjc.sbs, client-fingerprint: safari, network: ws, ws-opts: {path: /yfjc/jp, headers: {Host: yfjc-jp3-312.yfjc.sbs}}, udp: true}
+  - {name: 新加坡三网专线1号, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjc-sg1-311.yfjc.sbs, client-fingerprint: chrome, network: ws, ws-opts: {path: /yfjc/sg1, headers: {Host: yfjc-sg1-311.yfjc.sbs}}, udp: true}
+  - {name: 新加坡三网专线2号, server: cf.yfjc.sbs, port: 443, type: vless, uuid: 5a52cd3d-e62b-4bd8-9ff6-f718ae4f429e, tls: true, skip-cert-verify: true, servername: yfjc-sg1-311.yfjc.sbs, client-fingerprint: safari, network: ws, ws-opts: {path: /yfjc/sg1, headers: {Host: yfjc-sg1-311.yfjc.sbs}}, udp: true}
+proxy-groups:
+  - name: 🐸 手动切换
+    type: select
+    proxies:
+      - 日本专线-0.1x
+      - 日本专线2-0.1x
+      - 日本专线3-0.1x
+      - 日本专线4
+      - 日本专线5
+      - 日本专线6
+      - 美国洛杉矶专线-0.1x
+      - 美国洛杉矶专线2-0.1x
+      - 美国洛杉矶专线3-0.1x
+      - 美国洛杉矶专线4-0.1x
+      - 美国洛杉矶专线5-0.1x
+      - 新加坡专线
+      - 新加坡专线2
+      - 新加坡专线3
+      - 新加坡专线4
+      - 美国堪萨斯专线1-0.1x
+      - 荷兰专线
+      - 香港专线1-0.1x
+      - 香港专线2-0.1x
+      - 香港专线3-0.1x
+      - 香港专线4-0.1x
+      - 香港专线5-0.1x
+      - 巴西专线
+      - 日本三网专线1号
+      - 日本三网专线2号
+      - 日本三网专线3号
+      - 日本 | 移动专属1号-0.1x
+      - 日本 | 移动专属2号-0.1x
+      - 日本 | 移动专属3号-0.1x
+      - 日本 | 移动专属4号-0.1x
+      - 日本 | 移动专属5号-0.1x
+      - 日本 | 移动专属6号-0.1x
+      - 荷兰| BT下载-0.1x
+      - 荷兰2 | BT下载-0.1x
+      - 台湾
+      - 法国巴黎2
+      - 法国马赛
+      - 荷兰阿姆斯特丹
+      - 美国圣何塞
+      - 美国圣何塞2
+      - 英国伦敦
+      - 英国伦敦2
+      - 德国法兰克福
+      - 日本
+      - 日本2
+      - 美国1号-0.1x
+      - 美国2号-0.1x
+      - 美国3号-0.1x
+      - 日本1号-0.1x
+      - 日本2号-0.1x
+      - 日本3号-0.1x
+      - 日本4号-0.1x
+      - 日本5号-0.1x
+      - 日本6号-0.1x
+      - 新加坡三网专线1号
+      - 新加坡三网专线2号
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - ♻️ 一元自选
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🏡 家宽节点
+      - 🛩️ 高速节点
+      - 🕊️便宜节点
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 日本专线-0.1x
+      - 日本专线2-0.1x
+      - 日本专线3-0.1x
+      - 日本专线4
+      - 日本专线5
+      - 日本专线6
+      - 美国洛杉矶专线-0.1x
+      - 美国洛杉矶专线2-0.1x
+      - 美国洛杉矶专线3-0.1x
+      - 美国洛杉矶专线4-0.1x
+      - 美国洛杉矶专线5-0.1x
+      - 新加坡专线
+      - 新加坡专线2
+      - 新加坡专线3
+      - 新加坡专线4
+      - 美国堪萨斯专线1-0.1x
+      - 荷兰专线
+      - 香港专线1-0.1x
+      - 香港专线2-0.1x
+      - 香港专线3-0.1x
+      - 香港专线4-0.1x
+      - 香港专线5-0.1x
+      - 巴西专线
+      - 日本三网专线1号
+      - 日本三网专线2号
+      - 日本三网专线3号
+      - 日本 | 移动专属1号-0.1x
+      - 日本 | 移动专属2号-0.1x
+      - 日本 | 移动专属3号-0.1x
+      - 日本 | 移动专属4号-0.1x
+      - 日本 | 移动专属5号-0.1x
+      - 日本 | 移动专属6号-0.1x
+      - 荷兰| BT下载-0.1x
+      - 荷兰2 | BT下载-0.1x
+      - 台湾
+      - 法国巴黎2
+      - 法国马赛
+      - 荷兰阿姆斯特丹
+      - 美国圣何塞
+      - 美国圣何塞2
+      - 英国伦敦
+      - 英国伦敦2
+      - 德国法兰克福
+      - 日本
+      - 日本2
+      - 美国1号-0.1x
+      - 美国2号-0.1x
+      - 美国3号-0.1x
+      - 日本1号-0.1x
+      - 日本2号-0.1x
+      - 日本3号-0.1x
+      - 日本4号-0.1x
+      - 日本5号-0.1x
+      - 日本6号-0.1x
+      - 新加坡三网专线1号
+      - 新加坡三网专线2号
+  - name: ☁️ Icloud
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🐸 手动切换
+      - 🚀 节点选择
+  - name: 🍎 Apple
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🐸 手动切换
+      - 🚀 节点选择
+  - name: 🧭 Docker
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: 👯‍♀️ ForwardWidgetPorn
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: 🦜 Magpie
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - ♻️ 一元自选
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🐔 CC
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - ♻️ 一元自选
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🐧 纸片人小站
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - ♻️ 一元自选
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🕊️ 非越
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - ♻️ 一元自选
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🦅 飞跃彩虹
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - ♻️ 一元自选
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🐇 Sntp
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - ♻️ 一元自选
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🐾 琴鸟
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - ♻️ 一元自选
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🦘 Nanflix Plus
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - ♻️ 一元自选
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🐕 tmdb
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - ♻️ 一元自选
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🐔 vvebo
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - ♻️ 一元自选
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🫶 Hami
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇨🇳 台湾节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: 🍒 港澳台
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🕊️便宜节点
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇨🇳 台湾节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - ♻️ 一元自选
+      - DIRECT
+  - name: 📡 Hkdvb
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🕊️便宜节点
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇨🇳 台湾节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - ♻️ 一元自选
+      - DIRECT
+  - name: ▶️ Tvb
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - ♻️ 一元自选
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: 📡 trakttv
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇨🇳 台湾节点
+      - 🛩️ 高速节点
+      - 🌐 其他地区
+      - 🚀 节点选择
+      - 🐸 手动切换
+  - name: 🤖 AI
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🔯 日本故转
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇭🇰 香港节点
+      - 🏡 家宽节点
+      - 🐸 手动切换
+  - name: 🍀 Google
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: 📹 YouTube
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🕊️便宜节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: 💮 PixmanDirect
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🌸 PixmanProxy
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - ♻️ 一元自选
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🕊️便宜节点
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🆎 XPTVDirect
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🌐 其他地区
+      - 🐸 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 📢 FCM
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🐸 手动切换
+  - name: 👨🏿‍💻 GitHub
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: ✴️ Instagram
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: 🎼 Spotify
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - 🌐 其他地区
+      - DIRECT
+  - name: 🚴🏻‍♂️ Disney
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: ✡️ Twitter
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: 🐬 OneDrive
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🔯 日本故转
+      - 🔯 香港故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: 🪟 Microsoft
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🔯 日本故转
+      - 🔯 香港故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇯🇵 日本节点
+      - 🇭🇰 香港节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+      - DIRECT
+  - name: ♻️ Speedtest
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🇺🇲 美国节点
+      - 🐸 手动切换
+      - 🚀 节点选择
+  - name: 🎵 TikTok
+    type: select
+    proxies:
+      - 🇺🇲 美国节点
+      - 🚀 节点选择
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 日本故转
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+  - name: 🎥 Netflix
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🛩️ 高速节点
+      - 🎥 奈飞节点
+      - 🐸 手动切换
+  - name: 📲 Telegram
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - 💫 香港自动
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🐸 手动切换
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🔯 低倍率故转
+      - 🚀 节点选择
+      - 🔯 香港故转
+      - 🔯 日本故转
+      - 🔯 加坡故转
+      - ⭐ 香港故转
+      - ⭐ 日本故转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🛩️ 高速节点
+      - 🐸 手动切换
+  - name: 🎞️ 国内媒体
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🐸 手动切换
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🐸 手动切换
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🇺🇲 美国节点
+      - 🔯 低倍率故转
+      - ♻️ 一元自选
+      - DIRECT
+      - 🚀 节点选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 加坡节点
+      - 🐸 手动切换
+  - name: 🏡 家宽节点
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🛩️ 高速节点
+    type: select
+    proxies:
+      - 日本专线-0.1x
+      - 日本专线4
+      - 日本专线5
+      - 日本专线6
+      - 香港专线1-0.1x
+      - 日本三网专线1号
+      - 日本三网专线2号
+      - 日本三网专线3号
+      - 日本 | 移动专属1号-0.1x
+      - 日本 | 移动专属2号-0.1x
+      - 日本 | 移动专属3号-0.1x
+      - 日本 | 移动专属4号-0.1x
+      - 日本 | 移动专属5号-0.1x
+      - 日本 | 移动专属6号-0.1x
+      - 日本
+      - 日本2
+      - 日本1号-0.1x
+      - 日本2号-0.1x
+      - 日本3号-0.1x
+      - 日本4号-0.1x
+      - 日本5号-0.1x
+      - 日本6号-0.1x
+  - name: 🕊️便宜节点
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🇭🇰 香港节点
+    type: select
+    proxies:
+      - 香港专线1-0.1x
+      - 香港专线5-0.1x
+  - name: 🇨🇳 台湾节点
+    type: select
+    proxies:
+      - 台湾
+  - name: 🇯🇵 日本节点
+    type: select
+    proxies:
+      - 日本专线-0.1x
+      - 日本专线4
+      - 日本专线5
+      - 日本专线6
+      - 日本三网专线1号
+      - 日本三网专线2号
+      - 日本三网专线3号
+      - 日本 | 移动专属1号-0.1x
+      - 日本 | 移动专属2号-0.1x
+      - 日本 | 移动专属3号-0.1x
+      - 日本 | 移动专属4号-0.1x
+      - 日本 | 移动专属5号-0.1x
+      - 日本 | 移动专属6号-0.1x
+      - 日本
+      - 日本2
+      - 日本1号-0.1x
+      - 日本2号-0.1x
+      - 日本3号-0.1x
+      - 日本4号-0.1x
+      - 日本5号-0.1x
+      - 日本6号-0.1x
+  - name: 🇸🇬 加坡节点
+    type: select
+    proxies:
+      - 新加坡专线
+      - 新加坡专线2
+      - 新加坡专线3
+      - 新加坡专线4
+      - 新加坡三网专线1号
+      - 新加坡三网专线2号
+  - name: 🇺🇲 美国节点
+    type: select
+    proxies:
+      - 美国洛杉矶专线-0.1x
+      - 美国洛杉矶专线2-0.1x
+      - 美国洛杉矶专线3-0.1x
+      - 美国洛杉矶专线4-0.1x
+      - 美国洛杉矶专线5-0.1x
+      - 美国堪萨斯专线1-0.1x
+      - 美国圣何塞
+      - 美国圣何塞2
+      - 美国1号-0.1x
+      - 美国2号-0.1x
+      - 美国3号-0.1x
+  - name: 🌐 其他地区
+    type: select
+    proxies:
+      - 荷兰专线
+      - 巴西专线
+      - 荷兰| BT下载-0.1x
+      - 荷兰2 | BT下载-0.1x
+      - 台湾
+      - 法国巴黎2
+      - 法国马赛
+      - 荷兰阿姆斯特丹
+      - 英国伦敦
+      - 英国伦敦2
+      - 德国法兰克福
+  - name: 🔯 低倍率故转
+    type: select
+    proxies:
+      - 荷兰| BT下载-0.1x
+      - 荷兰2 | BT下载-0.1x
+  - name: 🔯 香港故转
+    type: select
+    proxies:
+      - 香港专线1-0.1x
+  - name: 🔯 日本故转
+    type: select
+    proxies:
+      - 日本专线-0.1x
+      - 日本专线4
+      - 日本专线5
+      - 日本专线6
+      - 日本三网专线1号
+      - 日本三网专线2号
+      - 日本三网专线3号
+      - 日本 | 移动专属1号-0.1x
+      - 日本 | 移动专属2号-0.1x
+      - 日本 | 移动专属3号-0.1x
+      - 日本 | 移动专属4号-0.1x
+      - 日本 | 移动专属5号-0.1x
+      - 日本 | 移动专属6号-0.1x
+      - 日本
+      - 日本2
+      - 日本1号-0.1x
+      - 日本2号-0.1x
+      - 日本3号-0.1x
+      - 日本4号-0.1x
+      - 日本5号-0.1x
+      - 日本6号-0.1x
+  - name: 🔯 加坡故转
+    type: select
+    proxies:
+      - 新加坡专线
+      - 新加坡专线2
+      - 新加坡专线3
+      - 新加坡专线4
+      - 新加坡三网专线1号
+      - 新加坡三网专线2号
+  - name: 💫 香港自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 150
+    proxies:
+      - DIRECT
+  - name: ⭐ 香港故转
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+  - name: ⭐ 日本故转
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+  - name: ♻️ 一元自选
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+  - name: 🍃 香港均衡
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 香港专线1-0.1x
+  - name: 🎥 奈飞节点
+    type: select
+    proxies:
+      - DIRECT
+rules:
+  - RULE-SET,docker-domain-set,🧭 Docker
+  - RULE-SET,Apple,🍎 Apple
+  - RULE-SET,icloud-domain-set,☁️ Icloud
+  - RULE-SET,ForwardWidgetPorn,👯‍♀️ ForwardWidgetPorn
+  - RULE-SET,Hami,🫶 Hami
+  - RULE-SET,HMT,🍒 港澳台
+  - RULE-SET,hkdvb,📡 Hkdvb
+  - RULE-SET,Magpie,🦜 Magpie
+  - RULE-SET,CC,🐔 CC
+  - RULE-SET,Embyplus,🐧 纸片人小站
+  - RULE-SET,FeiyueChat,🕊️ 非越
+  - RULE-SET,Feiyuecaihong,🦅 飞跃彩虹
+  - RULE-SET,Sntp,🐇 Sntp
+  - RULE-SET,Lyrebird,🐾 琴鸟
+  - RULE-SET,Nanflix-US,🦘 Nanflix Plus
+  - RULE-SET,tmdb,🐕 tmdb
+  - RULE-SET,vvebo,🐔 vvebo
+  - RULE-SET,tvb-domain-set,▶️ Tvb
+  - RULE-SET,trakttvproxy,📡 trakttv
+  - RULE-SET,YouTube,📹 YouTube
+  - RULE-SET,Google,🍀 Google
+  - RULE-SET,instagram-domain-set,✴️ Instagram
+  - RULE-SET,spotify-classical-set,🎼 Spotify
+  - RULE-SET,disney-classical-set,🚴🏻‍♂️ Disney
+  - RULE-SET,PixmanDirect,💮 PixmanDirect
+  - RULE-SET,PixmanProxy,🌸 PixmanProxy
+  - RULE-SET,twitter-classical-set,✡️ Twitter
+  - RULE-SET,XPTVDirect,🆎 XPTVDirect
+  - RULE-SET,GoogleFCM,📢 FCM
+  - RULE-SET,GitHub,👨🏿‍💻 GitHub
+  - RULE-SET,Telegram,📲 Telegram
+  - RULE-SET,OneDrive,🐬 OneDrive
+  - RULE-SET,Microsoft,🪟 Microsoft
+  - RULE-SET,Speedtest,♻️ Speedtest
+  - RULE-SET,AI,🤖 AI
+  - RULE-SET,Netflix,🎥 Netflix
+  - RULE-SET,TikTok,🎵 TikTok
+  - RULE-SET,ChinaMedia,🎞️ 国内媒体
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Direct,🎯 全球直连
+  - RULE-SET,Download,🎯 全球直连
+  - RULE-SET,China,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连,no-resolve
+  - MATCH,🐟 漏网之鱼
+rule-providers:
+  docker-domain-set:
+    type: http
+    behavior: domain
+    url: https://clashios.app/static/rules/docker-domain-set.yaml
+    path: ./providers/11782481525705722094_domain.yaml
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vQXBwbGUubGlzdA
+    path: ./providers/5594216904746221167.yaml
+    interval: 86400
+  icloud-domain-set:
+    type: http
+    behavior: domain
+    url: https://clashios.app/static/rules/icloud-domain-set.yaml
+    path: ./providers/15170615402776176062_domain.yaml
+    interval: 86400
+  ForwardWidgetPorn:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vRm9yd2FyZFdpZGdldFBvcm4ubGlzdA
+    path: ./providers/7903183276589632827.yaml
+    interval: 86400
+  Hami:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9tYWluL0hhbWkubGlzdA
+    path: ./providers/16623662961832244177.yaml
+    interval: 86400
+  HMT:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9tYWluL0hNVC5saXN0
+    path: ./providers/4926733767590203105.yaml
+    interval: 86400
+  hkdvb:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vaGtkdmIubGlzdA
+    path: ./providers/4154061946887162922.yaml
+    interval: 86400
+  Magpie:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vTWFncGllLmxpc3Q
+    path: ./providers/1989225007943648556.yaml
+    interval: 86400
+  CC:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vQ0MubGlzdA
+    path: ./providers/9112049799381428779.yaml
+    interval: 86400
+  Embyplus:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vRW1ieXBsdXMubGlzdA
+    path: ./providers/15817659453891455644.yaml
+    interval: 86400
+  FeiyueChat:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vRmVpeXVlQ2hhdC5saXN0
+    path: ./providers/15336243072171907036.yaml
+    interval: 86400
+  Feiyuecaihong:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vRmVpeXVlY2FpaG9uZy5saXN0
+    path: ./providers/15088612140557546061.yaml
+    interval: 86400
+  Sntp:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vU250cC5saXN0
+    path: ./providers/75535990625138706.yaml
+    interval: 86400
+  Lyrebird:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vTHlyZWJpcmQubGlzdA
+    path: ./providers/8972633843177530258.yaml
+    interval: 86400
+  Nanflix-US:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vTmFuZmxpeC1VUy5saXN0
+    path: ./providers/5273266937963109730.yaml
+    interval: 86400
+  tmdb:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vdG1kYi5saXN0
+    path: ./providers/10647460690623373458.yaml
+    interval: 86400
+  vvebo:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9yZWZzL2hlYWRzL21haW4vdnZlYm8ubGlzdA
+    path: ./providers/13006763097996010755.yaml
+    interval: 86400
+  tvb-domain-set:
+    type: http
+    behavior: domain
+    url: https://clashios.app/static/rules/tvb-domain-set.yaml
+    path: ./providers/15002544915695101240_domain.yaml
+    interval: 86400
+  trakttvproxy:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9tYWluL3RyYWt0dHZwcm94eS5saXN0
+    path: ./providers/5216581524476145366.yaml
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Zb3VUdWJlLmxpc3Q
+    path: ./providers/6665783339279527800.yaml
+    interval: 86400
+  Google:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlL0dvb2dsZS5saXN0
+    path: ./providers/9745892666249363607.yaml
+    interval: 86400
+  instagram-domain-set:
+    type: http
+    behavior: domain
+    url: https://clashios.app/static/rules/instagram-domain-set.yaml
+    path: ./providers/12018191265290348340_domain.yaml
+    interval: 86400
+  spotify-classical-set:
+    type: http
+    behavior: classical
+    url: https://clashios.app/static/rules/spotify-classical-set.yaml
+    path: ./providers/1859526640366766185.yaml
+    interval: 86400
+  disney-classical-set:
+    type: http
+    behavior: classical
+    url: https://clashios.app/static/rules/disney-classical-set.yaml
+    path: ./providers/736007146033145293.yaml
+    interval: 86400
+  PixmanDirect:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9tYWluL1BpeG1hbkRpcmVjdC5saXN0
+    path: ./providers/12905099946246558972.yaml
+    interval: 86400
+  PixmanProxy:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9tYWluL1BpeG1hblByb3h5Lmxpc3Q
+    path: ./providers/15894471412375508341.yaml
+    interval: 86400
+  twitter-classical-set:
+    type: http
+    behavior: classical
+    url: https://clashios.app/static/rules/twitter-classical-set.yaml
+    path: ./providers/16126008157202918418.yaml
+    interval: 86400
+  XPTVDirect:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9tYWluL1hQVFZEaXJlY3QubGlzdA
+    path: ./providers/10329696153277305923.yaml
+    interval: 86400
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlRkNNL0dvb2dsZUZDTS5saXN0
+    path: ./providers/9484691791764700087.yaml
+    interval: 86400
+  GitHub:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+    path: ./providers/13295610275586999576.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGVsZWdyYW0vVGVsZWdyYW0ubGlzdA
+    path: ./providers/8763765701616688047.yaml
+    interval: 86400
+  OneDrive:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvT25lRHJpdmUvT25lRHJpdmUubGlzdA
+    path: ./providers/10276183577064849757.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTWljcm9zb2Z0Lmxpc3Q
+    path: ./providers/10538434793549721944.yaml
+    interval: 86400
+  Speedtest:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3BlZWR0ZXN0L1NwZWVkdGVzdC5saXN0
+    path: ./providers/16786696161989900119.yaml
+    interval: 86400
+  AI:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9tYWluL0FJLmxpc3Q
+    path: ./providers/11622564482228775120.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9OZXRmbGl4Lmxpc3Q
+    path: ./providers/6953567076524950087.yaml
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGlrVG9rL1Rpa1Rvay5saXN0
+    path: ./providers/8892690363266924989.yaml
+    interval: 86400
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ2hpbmFNZWRpYS9DaGluYU1lZGlhLmxpc3Q
+    path: ./providers/18101706129262512987.yaml
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlNZWRpYS5saXN0
+    path: ./providers/11865208451954205364.yaml
+    interval: 86400
+  Direct:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0phY2sxMjNsaWFuZy9MaWFuZy9tYWluL0RpcmVjdC5saXN0
+    path: ./providers/16664711789196264097.yaml
+    interval: 86400
+  Download:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvRG93bmxvYWQubGlzdA
+    path: ./providers/892107463922605120.yaml
+    interval: 86400
+  China:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ2hpbmEvQ2hpbmEubGlzdA
+    path: ./providers/14614068387735384431.yaml
+    interval: 86400
