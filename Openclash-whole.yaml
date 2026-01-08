@@ -147,7 +147,7 @@ proxy-groups:
   - 🇯🇵 JP 日本
   - 🇺🇲 US 美国
   - 🇳🇱 NL 荷兰
-- name: 🍎 Apple
+- name:  Apple
   type: select
   proxies:
   - DIRECT
@@ -446,7 +446,7 @@ rules:
 - GEOSITE,twitter,💋 X
 - GEOSITE,steam@cn,DIRECT
 - GEOSITE,steam,🚀 选择代理
-- GEOSITE,apple,🍎 Apple
+- GEOSITE,apple, Apple
 - GEOIP,LAN,DIRECT
 - GEOIP,CN,DIRECT
 - MATCH,🐟 漏网之鱼
