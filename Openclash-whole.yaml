@@ -447,8 +447,8 @@ rules:
 - GEOSITE,steam@cn,DIRECT
 - GEOSITE,steam,🚀 选择代理
 - GEOSITE,apple, Apple
-- GEOIP,LAN,DIRECT
-- GEOIP,CN,DIRECT
+- GEOIP,LAN,DIRECT,no-resolve
+- GEOIP,CN,DIRECT,no-resolve
 - MATCH,🐟 漏网之鱼
 dns:
   enable: true
