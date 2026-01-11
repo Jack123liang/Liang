@@ -1,32 +1,40 @@
 # =====================
-# AI & Chat 全自动家庭版极速规则
+# AI & Chat 全自动家庭版增强规则
 # =====================
 
-# 核心关键字匹配（兜底未知子域）
+# --- 关键字匹配 ---
 DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,anthropic
 DOMAIN-KEYWORD,claude
-DOMAIN-KEYWORD,colab
-DOMAIN-KEYWORD,generative
+DOMAIN-KEYWORD,gemini
+DOMAIN-KEYWORD,generativeai
+DOMAIN-KEYWORD,perplexity
 
-# 核心域名后缀（主站、接口、静态资源）
+# --- OpenAI (ChatGPT) ---
 DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+
+# --- Anthropic (Claude) ---
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
+
+# --- Google (Gemini & Bard) ---
 DOMAIN-SUFFIX,bard.google.com
 DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-SUFFIX,deepmind.com
-DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,apis.google.com
-DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,chatgpt.com
-
-# 核心接口域名（精确匹配）
+DOMAIN-SUFFIX,ai.google.dev
 DOMAIN,generativeai.googleapis.com
 DOMAIN,proactivebackend-pa.googleapis.com
 DOMAIN,aisandbox-pa.googleapis.com
-DOMAIN,ai.google.dev
-DOMAIN,another-gemini-api.googleapis.com
+# 补充
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+
+# --- Perplexity ---
+DOMAIN-SUFFIX,perplexity.ai
+
+# --- 辅助 & 静态资源 ---
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,intercom.io
