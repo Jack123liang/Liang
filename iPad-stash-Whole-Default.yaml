@@ -407,30 +407,10 @@ rules:
   - PROCESS-NAME,trustd,选择代理
   # Microsoft
   - GEOSITE,microsoft@cn,DIRECT
-  # common proxy utils
-  - PROCESS-NAME,v2ray,DIRECT
-  - PROCESS-NAME,Surge,DIRECT
-  - PROCESS-NAME,ss-local,DIRECT
-  - PROCESS-NAME,privoxy,DIRECT
-  - PROCESS-NAME,trojan,DIRECT
-  - PROCESS-NAME,trojan-go,DIRECT
-  - PROCESS-NAME,naive,DIRECT
-  - PROCESS-NAME,CloudflareWARP,DIRECT
-  - PROCESS-NAME,Cloudflare WARP,DIRECT
   - IP-CIDR,162.159.193.0/24,DIRECT,no-resolve
-  - PROCESS-NAME,p4pclient,DIRECT
-  - PROCESS-NAME,Thunder,DIRECT
-  - PROCESS-NAME,DownloadService,DIRECT
-  - PROCESS-NAME,qbittorrent,DIRECT
-  - PROCESS-NAME,Transmission,DIRECT
-  - PROCESS-NAME,fdm,DIRECT
-  - PROCESS-NAME,aria2c,DIRECT
-  - PROCESS-NAME,Folx,DIRECT
-  - PROCESS-NAME,NetTransport,DIRECT
-  - PROCESS-NAME,uTorrent,DIRECT
-  - PROCESS-NAME,WebTorrent,DIRECT
-  - GEOIP,LAN,DIRECT
-  - GEOIP,CN,DIRECT
+  - GEOSITE,CN,DIRECT
+  - GEOIP,LAN,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
   - MATCH,漏网之鱼
 script:
   shortcuts:
