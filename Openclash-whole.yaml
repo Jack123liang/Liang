@@ -280,6 +280,13 @@ proxy-groups:
   type: select
   proxies:
   - 🚀 选择代理
+  - ⚡ 自动选择
+  - 📍 手动选择
+  - 🇺🇲 US 美国
+  - 🇭🇰 HK 香港
+  - 🇯🇵 JP 日本
+  - 🇨🇳 TW 台湾
+  - 🇸🇬 SG 新加坡
   - DIRECT
 - name: 🇭🇰 HK 香港
   type: url-test
