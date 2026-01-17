@@ -427,6 +427,27 @@ rule-providers:
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/TVB.list
 
   # --- 新增升级的 MRS 二进制规则 (Meta 内核专用) ---
+  xiaohongshu_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xiaohongshu.mrs
+    path: ./rule_provider/xiaohongshu_site.mrs
+    interval: 86400
+  bilibili_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bilibili.mrs
+    path: ./rule_provider/bilibili_site.mrs
+    interval: 86400
+  bilibili_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geoip/bilibili.mrs
+    path: ./rule_provider/bilibili_ip.mrs
+    interval: 86400
   youtube_mrs:
     type: http
     behavior: domain
@@ -570,7 +591,9 @@ rules:
   - RULE-SET,Pixman Proxy,🍒 Pixman Proxy
 
   # 3. 直连规则与特殊处理
-  - GEOSITE,bilibili,DIRECT
+  - RULE-SET,xiaohongshu_site_mrs,DIRECT
+  - RULE-SET,bilibili_site_mrs,DIRECT
+  - RULE-SET,bilibili_ip_mrs,DIRECT
   - GEOSITE,steam@cn,DIRECT
   - GEOSITE,steam,🚀 选择代理
   - RULE-SET,apple_site_mrs, Apple
