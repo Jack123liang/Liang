@@ -503,19 +503,19 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs
     path: ./rule_provider/disney_site.mrs
     interval: 86400
-  spotify_mrs:
+  spotify_site_mrs:
     type: http
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs
-    path: ./rule_provider/spotify.mrs
+    path: ./rule_provider/spotify_site.mrs
     interval: 86400
-  github_mrs:
+  github_site_mrs:
     type: http
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
-    path: ./rule_provider/github.mrs
+    path: ./rule_provider/github_site.mrs
     interval: 86400
   twitter_site_mrs:
     type: http
@@ -531,12 +531,12 @@ rule-providers:
     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/twitter.mrs
     path: ./rule_provider/twitter_ip.mrs
     interval: 86400
-  speedtest_mrs:
+  speedtest_site_mrs:
     type: http
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/speedtest.mrs
-    path: ./rule_provider/speedtest.mrs
+    path: ./rule_provider/speedtest_site.mrs
     interval: 86400
   apple_site_mrs:
     type: http
@@ -590,12 +590,12 @@ rules:
   - RULE-SET,youtube_site_mrs,▶️ YouTube
   - RULE-SET,google_site_mrs,🍀 Google
   - RULE-SET,google_ip_mrs,🍀 Google
-  - RULE-SET,spotify_mrs,🎼 Spotify
+  - RULE-SET,spotify_site_mrs,🎼 Spotify
   - RULE-SET,netflix_site_mrs,🎥 Netflix
   - RULE-SET,netflix_ip_mrs,🎥 Netflix
   - RULE-SET,disney_site_mrs,🎉 Disney+
-  - RULE-SET,github_mrs,🎖️ Github
-  - RULE-SET,speedtest_mrs,🎾 Speedtest
+  - RULE-SET,github_site_mrs,🎖️ Github
+  - RULE-SET,speedtest_site_mrs,🎾 Speedtest
   - RULE-SET,TVB,📺 TVB
   - RULE-SET,Pixman Direct,🍇 Pixman Direct
   - RULE-SET,Pixman Proxy,🍒 Pixman Proxy
