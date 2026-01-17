@@ -7,6 +7,7 @@ allow-lan: true
 ipv6: false
 mode: rule
 log-level: warning
+
 proxy-providers:
   一分机场:
     type: http
@@ -17,6 +18,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+
 proxy-groups:
 - name: 📍 手动选择
   type: select
@@ -336,7 +338,9 @@ proxy-groups:
   interval: 120
   tolerance: 50
   lazy: true
+
 rule-providers:
+  # --- 你原有的外部规则 ---
   Sntp:
     type: http
     behavior: classical
@@ -393,13 +397,6 @@ rule-providers:
     interval: 86400
     path: "/etc/openclash/rule_provider/Nanflix-US.list"
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Nanflix-US.list
-  Telegram:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: "/etc/openclash/rule_provider/Telegram.yaml"
-    url: https://clashios.app/static/rules/telegram-classical-set.yaml
   AI:
     type: http
     behavior: classical
@@ -428,36 +425,135 @@ rule-providers:
     interval: 86400
     path: "/etc/openclash/rule_provider/TVB.list"
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/TVB.list
+
+  # --- 新增升级的 MRS 二进制规则 (Meta 内核专用) ---
+  youtube_mrs:
+    type: http
+    behavior: site
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
+    path: ./rule_provider/youtube.mrs
+    interval: 86400
+  google_mrs:
+    type: http
+    behavior: site
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs
+    path: ./rule_provider/google.mrs
+    interval: 86400
+  telegram_site_mrs:
+    type: http
+    behavior: site
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
+    path: ./rule_provider/telegram_site.mrs
+    interval: 86400
+  telegram_ip_mrs:
+    type: http
+    behavior: ip
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs
+    path: ./rule_provider/telegram_ip.mrs
+    interval: 86400
+  netflix_mrs:
+    type: http
+    behavior: site
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
+    path: ./rule_provider/netflix.mrs
+    interval: 86400
+  disney_mrs:
+    type: http
+    behavior: site
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs
+    path: ./rule_provider/disney.mrs
+    interval: 86400
+  spotify_mrs:
+    type: http
+    behavior: site
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs
+    path: ./rule_provider/spotify.mrs
+    interval: 86400
+  github_mrs:
+    type: http
+    behavior: site
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
+    path: ./rule_provider/github.mrs
+    interval: 86400
+  twitter_mrs:
+    type: http
+    behavior: site
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs
+    path: ./rule_provider/twitter.mrs
+    interval: 86400
+  speedtest_mrs:
+    type: http
+    behavior: site
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/speedtest.mrs
+    path: ./rule_provider/speedtest.mrs
+    interval: 86400
+  cn_site_mrs:
+    type: http
+    behavior: site
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
+    path: ./rule_provider/cn_site.mrs
+    interval: 86400
+  cn_ip_mrs:
+    type: http
+    behavior: ip
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
+    path: ./rule_provider/cn_ip.mrs
+    interval: 86400
+
 rules:
-- RULE-SET,Sntp,🐇 Sntp
-- RULE-SET,FeiyueChat,🕊️ 非越
-- RULE-SET,feiyuecaihong,🦋 飞跃彩虹
-- RULE-SET,CC,🐔 CC
-- RULE-SET,Embyplus,🐧 纸片人小站
-- RULE-SET,Lyrebird,🐦‍⬛ 琴鸟
-- RULE-SET,Magpie,🦜 喜鹊
-- RULE-SET,Nanflix-US,🍭 Nanflix-US
-- GEOSITE,bilibili,DIRECT
-- GEOSITE,netflix,🎥 Netflix
-- GEOSITE,disney,🎉 Disney+
-- GEOSITE,spotify,🎼 Spotify
-- RULE-SET,AI,🤖 AI
-- RULE-SET,TVB,📺 TVB
-- RULE-SET,Pixman Direct,🍇 Pixman Direct
-- RULE-SET,Pixman Proxy,🍒 Pixman Proxy
-- GEOSITE,speedtest,🎾 Speedtest
-- GEOSITE,github,🎖️ Github
-- RULE-SET,Telegram,📲 Telegram
-- GEOSITE,youtube,▶️ YouTube
-- GEOSITE,google,🍀 Google
-- GEOSITE,twitter,💋 X
-- GEOSITE,steam@cn,DIRECT
-- GEOSITE,steam,🚀 选择代理
-- GEOSITE,apple, Apple
-- GEOSITE,CN,DIRECT
-- GEOIP,LAN,DIRECT,no-resolve
-- GEOIP,CN,DIRECT,no-resolve
-- MATCH,🐟 漏网之鱼
+  # 1. 顶部自定义逻辑
+  - RULE-SET,Sntp,🐇 Sntp
+  - RULE-SET,FeiyueChat,🕊️ 非越
+  - RULE-SET,feiyuecaihong,🦋 飞跃彩虹
+  - RULE-SET,CC,🐔 CC
+  - RULE-SET,Embyplus,🐧 纸片人小站
+  - RULE-SET,Lyrebird,🐦‍⬛ 琴鸟
+  - RULE-SET,Magpie,🦜 喜鹊
+  - RULE-SET,Nanflix-US,🍭 Nanflix-US
+
+  # 2. 国外服务优化 (使用 MRS 替代 GEOSITE)
+  - RULE-SET,telegram_site_mrs,📲 Telegram
+  - RULE-SET,telegram_ip_mrs,📲 Telegram
+  - RULE-SET,youtube_mrs,▶️ YouTube
+  - RULE-SET,google_mrs,🍀 Google
+  - RULE-SET,netflix_mrs,🎥 Netflix
+  - RULE-SET,disney_mrs,🎉 Disney+
+  - RULE-SET,spotify_mrs,🎼 Spotify
+  - RULE-SET,github_mrs,🎖️ Github
+  - RULE-SET,twitter_mrs,💋 X
+  - RULE-SET,speedtest_mrs,🎾 Speedtest
+  - RULE-SET,AI,🤖 AI
+  - RULE-SET,TVB,📺 TVB
+  - RULE-SET,Pixman Direct,🍇 Pixman Direct
+  - RULE-SET,Pixman Proxy,🍒 Pixman Proxy
+
+  # 3. 直连规则与特殊处理
+  - GEOSITE,bilibili,DIRECT
+  - GEOSITE,steam@cn,DIRECT
+  - GEOSITE,steam,🚀 选择代理
+  - GEOSITE,apple, Apple
+  - DOMAIN-SUFFIX,jsdelivr.net,🚀 选择代理
+
+  # 4. 国内分流优化 (使用 MRS 替代 GEOSITE,CN 和 GEOIP,CN)
+  - RULE-SET,cn_site_mrs,DIRECT
+  - RULE-SET,cn_ip_mrs,DIRECT,no-resolve
+
+  # 5. 最终兜底
+  - GEOIP,LAN,DIRECT,no-resolve
+  - MATCH,🐟 漏网之鱼
+
 dns:
   enable: true
   listen: 0.0.0.0:7874
@@ -510,6 +606,7 @@ dns:
     - "+.googlevideo.com"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
+
 tproxy-port: 7895
 external-controller: 0.0.0.0:9090
 secret: FpVpys5Q
@@ -524,6 +621,7 @@ geox-url:
   mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb
   geosite: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
   asn: https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb
+
 sniffer:
   enable: true
   override-destination: true
@@ -552,13 +650,17 @@ sniffer:
   - "+.sunlogin.net"
   - "+.push.apple.com"
   parse-pure-ip: true
+
 profile:
   store-selected: true
+
 ntp:
   enable: true
   server: time.apple.com
   port: 123
   interval: 30
   write-to-system: true
+
 authentication:
-- Clash:CLITwgkP
+- Clash:CLITwgkP_
+
