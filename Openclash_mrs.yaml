@@ -346,84 +346,84 @@ rule-providers:
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/Sntp.list"
+    path: ./rule_provider/Sntp.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Sntp.list
   FeiyueChat:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/FeiyueChat.list"
+    path: ./rule_provider/FeiyueChat.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/FeiyueChat.list
   feiyuecaihong:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/Feiyuecaihong.list"
+    path: ./rule_provider/Feiyuecaihong.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Feiyuecaihong.list
   CC:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/CC.list"
+    path: ./rule_provider/CC.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/CC.list
   Embyplus:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/Embyplus.list"
+    path: ./rule_provider/Embyplus.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Embyplus.list
   Lyrebird:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/Lyrebird.list"
+    path: ./rule_provider/Lyrebird.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Lyrebird.list
   Magpie:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/Magpie.list"
+    path: ./rule_provider/Magpie.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Magpie.list
   Nanflix-US:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/Nanflix-US.list"
+    path: ./rule_provider/Nanflix-US.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Nanflix-US.list
   AI:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/AI.list"
+    path: ./rule_provider/AI.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/AI.list
   Pixman Direct:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/PixmanDirect.list"
+    path: ./rule_provider/PixmanDirect.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/PixmanDirect.list
   Pixman Proxy:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/PixmanProxy.list"
+    path: ./rule_provider/PixmanProxy.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/PixmanProxy.list
   TVB:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    path: "/etc/openclash/rule_provider/TVB.list"
+    path: ./rule_provider/TVB.list
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/TVB.list
 
   # --- 新增升级的 MRS 二进制规则 (Meta 内核专用) ---
@@ -448,18 +448,18 @@ rule-providers:
     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geoip/bilibili.mrs
     path: ./rule_provider/bilibili_ip.mrs
     interval: 86400
-  youtube_mrs:
+  youtube_site_mrs:
     type: http
     behavior: domain
     format: mrs
     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs
-    path: ./rule_provider/youtube.mrs
+    path: ./rule_provider/youtube_site.mrs
     interval: 86400
   google_site_mrs:
     type: http
     behavior: domain
     format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs
     path: ./rule_provider/google_site.mrs
   google_ip_mrs:
     type: http
@@ -496,12 +496,12 @@ rule-providers:
     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs
     path: ./rule_provider/netflix_ip.mrs
     interval: 86400
-  disney_mrs:
+  disney_site_mrs:
     type: http
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs
-    path: ./rule_provider/disney.mrs
+    path: ./rule_provider/disney_site.mrs
     interval: 86400
   spotify_mrs:
     type: http
@@ -577,32 +577,30 @@ rules:
   - RULE-SET,Lyrebird,🐦‍⬛ 琴鸟
   - RULE-SET,Magpie,🦜 喜鹊
   - RULE-SET,Nanflix-US,🍭 Nanflix-US
+  - RULE-SET,xiaohongshu_site_mrs,DIRECT
+  - RULE-SET,bilibili_site_mrs,DIRECT
+  - RULE-SET,bilibili_ip_mrs,DIRECT
 
   # 2. 国外服务优化 (使用 MRS 替代 GEOSITE)
-  - RULE-SET,telegram_site_mrs,📲 Telegram
-  - RULE-SET,telegram_ip_mrs,📲 Telegram
-  - RULE-SET,youtube_mrs,▶️ YouTube
-  - RULE-SET,google_site_mrs,🍀 Google
-  - RULE-SET,google_ip_mrs,🍀 Google
-  - RULE-SET,netflix_site_mrs,🎥 Netflix
-  - RULE-SET,netflix_ip_mrs,🎥 Netflix
-  - RULE-SET,disney_mrs,🎉 Disney+
-  - RULE-SET,spotify_mrs,🎼 Spotify
-  - RULE-SET,github_mrs,🎖️ Github
+  - RULE-SET,AI,🤖 AI
   - RULE-SET,twitter_site_mrs,💋 X
   - RULE-SET,twitter_ip_mrs,💋 X
+  - RULE-SET,telegram_site_mrs,📲 Telegram
+  - RULE-SET,telegram_ip_mrs,📲 Telegram
+  - RULE-SET,youtube_site_mrs,▶️ YouTube
+  - RULE-SET,google_site_mrs,🍀 Google
+  - RULE-SET,google_ip_mrs,🍀 Google
+  - RULE-SET,spotify_mrs,🎼 Spotify
+  - RULE-SET,netflix_site_mrs,🎥 Netflix
+  - RULE-SET,netflix_ip_mrs,🎥 Netflix
+  - RULE-SET,disney_site_mrs,🎉 Disney+
+  - RULE-SET,github_mrs,🎖️ Github
   - RULE-SET,speedtest_mrs,🎾 Speedtest
-  - RULE-SET,AI,🤖 AI
   - RULE-SET,TVB,📺 TVB
   - RULE-SET,Pixman Direct,🍇 Pixman Direct
   - RULE-SET,Pixman Proxy,🍒 Pixman Proxy
 
   # 3. 直连规则与特殊处理
-  - RULE-SET,xiaohongshu_site_mrs,DIRECT
-  - RULE-SET,bilibili_site_mrs,DIRECT
-  - RULE-SET,bilibili_ip_mrs,DIRECT
-  - GEOSITE,steam@cn,DIRECT
-  - GEOSITE,steam,🚀 选择代理
   - RULE-SET,apple_site_mrs, Apple
   - RULE-SET,apple_ip_mrs, Apple
   - DOMAIN-SUFFIX,jsdelivr.net,🚀 选择代理
