@@ -429,21 +429,21 @@ rule-providers:
   # --- 新增升级的 MRS 二进制规则 (Meta 内核专用) ---
   youtube_mrs:
     type: http
-    behavior: site
+    behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
     path: ./rule_provider/youtube.mrs
     interval: 86400
   google_mrs:
     type: http
-    behavior: site
+    behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs
     path: ./rule_provider/google.mrs
     interval: 86400
   telegram_site_mrs:
     type: http
-    behavior: site
+    behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
     path: ./rule_provider/telegram_site.mrs
@@ -457,7 +457,7 @@ rule-providers:
     interval: 86400
   netflix_site_mrs:
     type: http
-    behavior: site
+    behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
     path: ./rule_provider/netflix_site.mrs
@@ -471,28 +471,28 @@ rule-providers:
     interval: 86400
   disney_mrs:
     type: http
-    behavior: site
+    behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs
     path: ./rule_provider/disney.mrs
     interval: 86400
   spotify_mrs:
     type: http
-    behavior: site
+    behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs
     path: ./rule_provider/spotify.mrs
     interval: 86400
   github_mrs:
     type: http
-    behavior: site
+    behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
     path: ./rule_provider/github.mrs
     interval: 86400
   twitter_site_mrs:
     type: http
-    behavior: site
+    behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs
     path: ./rule_provider/twitter_site.mrs
@@ -506,21 +506,35 @@ rule-providers:
     interval: 86400
   speedtest_mrs:
     type: http
-    behavior: site
+    behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/speedtest.mrs
     path: ./rule_provider/speedtest.mrs
     interval: 86400
+  apple_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs
+    path: ./rule_provider/apple_site.mrs
+    interval: 86400
+  apple_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geoip/apple.mrs
+    path: ./rule_provider/apple_ip.mrs
+    interval: 86400
   cn_site_mrs:
     type: http
-    behavior: site
+    behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
     path: ./rule_provider/cn_site.mrs
     interval: 86400
   cn_ip_mrs:
     type: http
-    behavior: ip
+    behavior: ipcidr
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
     path: ./rule_provider/cn_ip.mrs
@@ -559,7 +573,8 @@ rules:
   - GEOSITE,bilibili,DIRECT
   - GEOSITE,steam@cn,DIRECT
   - GEOSITE,steam,🚀 选择代理
-  - GEOSITE,apple, Apple
+  - RULE-SET,apple_site_mrs, Apple
+  - RULE-SET,apple_ip_mrs, Apple
   - DOMAIN-SUFFIX,jsdelivr.net,🚀 选择代理
 
   # 4. 国内分流优化 (使用 MRS 替代 GEOSITE,CN 和 GEOIP,CN)
