@@ -452,15 +452,21 @@ rule-providers:
     type: http
     behavior: domain
     format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs
     path: ./rule_provider/youtube.mrs
     interval: 86400
-  google_mrs:
+  google_site_mrs:
     type: http
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs
-    path: ./rule_provider/google.mrs
+    path: ./rule_provider/google_site.mrs
+  google_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs
+    path: ./rule_provider/google_ip.mrs
     interval: 86400
   telegram_site_mrs:
     type: http
@@ -576,7 +582,8 @@ rules:
   - RULE-SET,telegram_site_mrs,📲 Telegram
   - RULE-SET,telegram_ip_mrs,📲 Telegram
   - RULE-SET,youtube_mrs,▶️ YouTube
-  - RULE-SET,google_mrs,🍀 Google
+  - RULE-SET,google_site_mrs,🍀 Google
+  - RULE-SET,google_ip_mrs,🍀 Google
   - RULE-SET,netflix_site_mrs,🎥 Netflix
   - RULE-SET,netflix_ip_mrs,🎥 Netflix
   - RULE-SET,disney_mrs,🎉 Disney+
