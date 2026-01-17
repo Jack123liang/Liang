@@ -450,17 +450,24 @@ rule-providers:
     interval: 86400
   telegram_ip_mrs:
     type: http
-    behavior: ip
+    behavior: ipcidr
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs
     path: ./rule_provider/telegram_ip.mrs
     interval: 86400
-  netflix_mrs:
+  netflix_site_mrs:
     type: http
     behavior: site
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
-    path: ./rule_provider/netflix.mrs
+    path: ./rule_provider/netflix_site.mrs
+    interval: 86400
+  netflix_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs
+    path: ./rule_provider/netflix_ip.mrs
     interval: 86400
   disney_mrs:
     type: http
@@ -528,7 +535,8 @@ rules:
   - RULE-SET,telegram_ip_mrs,📲 Telegram
   - RULE-SET,youtube_mrs,▶️ YouTube
   - RULE-SET,google_mrs,🍀 Google
-  - RULE-SET,netflix_mrs,🎥 Netflix
+  - RULE-SET,netflix_site_mrs,🎥 Netflix
+  - RULE-SET,netflix_ip_mrs,🎥 Netflix
   - RULE-SET,disney_mrs,🎉 Disney+
   - RULE-SET,spotify_mrs,🎼 Spotify
   - RULE-SET,github_mrs,🎖️ Github
