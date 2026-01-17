@@ -490,12 +490,19 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
     path: ./rule_provider/github.mrs
     interval: 86400
-  twitter_mrs:
+  twitter_site_mrs:
     type: http
     behavior: site
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs
-    path: ./rule_provider/twitter.mrs
+    path: ./rule_provider/twitter_site.mrs
+    interval: 86400
+  twitter_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/twitter.mrs
+    path: ./rule_provider/twitter_ip.mrs
     interval: 86400
   speedtest_mrs:
     type: http
@@ -540,7 +547,8 @@ rules:
   - RULE-SET,disney_mrs,🎉 Disney+
   - RULE-SET,spotify_mrs,🎼 Spotify
   - RULE-SET,github_mrs,🎖️ Github
-  - RULE-SET,twitter_mrs,💋 X
+  - RULE-SET,twitter_site_mrs,💋 X
+  - RULE-SET,twitter_ip_mrs,💋 X
   - RULE-SET,speedtest_mrs,🎾 Speedtest
   - RULE-SET,AI,🤖 AI
   - RULE-SET,TVB,📺 TVB
