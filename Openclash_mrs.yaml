@@ -187,6 +187,212 @@ proxy-groups:
     filter: "(台湾|TW|Taiwan|台北|Taipei)"
     interval: 120
     tolerance: 50
+# 规则集定义
+rule-providers:
+  Sntp:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/Sntp.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Sntp.list
+  FeiyueChat:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/FeiyueChat.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/FeiyueChat.list
+  feiyuecaihong:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/Feiyuecaihong.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Feiyuecaihong.list
+  CC:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/CC.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/CC.list
+  Embyplus:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/Embyplus.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Embyplus.list
+  Lyrebird:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/Lyrebird.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Lyrebird.list
+  Magpie:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/Magpie.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Magpie.list
+  Nanflix-US:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/Nanflix-US.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Nanflix-US.list
+  AI:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/AI.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/AI.list
+  Pixman Direct:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/PixmanDirect.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/PixmanDirect.list
+  Pixman Proxy:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/PixmanProxy.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/PixmanProxy.list
+  TVB:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    path: "./rule_provider/TVB.list"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/TVB.list
+  xiaohongshu_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xiaohongshu.mrs
+    path: "./rule_provider/xiaohongshu_site.mrs"
+  bilibili_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bilibili.mrs
+    path: "./rule_provider/bilibili_site.mrs"
+  bilibili_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geoip/bilibili.mrs
+    path: "./rule_provider/bilibili_ip.mrs"
+  youtube_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs
+    path: "./rule_provider/youtube_site.mrs"
+  google_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs
+    path: "./rule_provider/google_site.mrs"
+  google_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs
+    path: "./rule_provider/google_ip.mrs"
+  telegram_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
+    path: "./rule_provider/telegram_site.mrs"
+  telegram_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs
+    path: "./rule_provider/telegram_ip.mrs"
+  netflix_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
+    path: "./rule_provider/netflix_site.mrs"
+  netflix_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs
+    path: "./rule_provider/netflix_ip.mrs"
+  disney_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs
+    path: "./rule_provider/disney_site.mrs"
+  spotify_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs
+    path: "./rule_provider/spotify_site.mrs"
+  github_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
+    path: "./rule_provider/github_site.mrs"
+  twitter_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs
+    path: "./rule_provider/twitter_site.mrs"
+  twitter_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/twitter.mrs
+    path: "./rule_provider/twitter_ip.mrs"
+  speedtest_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/speedtest.mrs
+    path: "./rule_provider/speedtest_site.mrs"
+  apple_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs
+    path: "./rule_provider/apple_site.mrs"
+  apple_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geoip/apple.mrs
+    path: "./rule_provider/apple_ip.mrs"
+  cn_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
+    path: "./rule_provider/cn_site.mrs"
+  cn_ip_mrs:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
+    path: "./rule_provider/cn_ip.mrs"
 
 # 规则部分（确保 Emoji 与上方完全一致）
 rules:
