@@ -1,6 +1,6 @@
 proxy-providers:
   一分机场:
-    url: https
+    url: https:
     interval: 86400
     # 服务提供商-2:
     #   url: http://your-another-service-provider
