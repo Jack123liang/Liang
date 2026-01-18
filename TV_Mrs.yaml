@@ -1,6 +1,6 @@
 proxy-providers:
   一分机场:
-    url: https://www.yfjc.xyz/api/v1/client/subscribe?token=203ef91fddbb490bef4afbc5fe33fe3e
+    url: https
     interval: 86400
     # 服务提供商-2:
     #   url: http://your-another-service-provider
