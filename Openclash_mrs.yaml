@@ -85,7 +85,7 @@ proxy-groups:
 
   - name: " Apple"
     type: select
-    proxies: [DIRECT]
+    proxies: [DIRECT, "📍 手动选择"]
 
   - name: "🤖 AI"
     type: select
