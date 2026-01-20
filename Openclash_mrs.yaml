@@ -93,6 +93,10 @@ proxy-groups:
     filter: "(新加坡|美国|SG|US)(?!.*0\\.1)"
     proxies: ["📍 手动选择"]
 
+  - name: "🦄 Instagram"
+    type: select
+    proxies: ["🚀 选择代理", "⚡ 自动选择", "📍 手动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", "🇳🇱 NL 荷兰"]
+    
   - name: "▶️ YouTube"
     type: select
     proxies: ["🚀 选择代理", "⚡ 自动选择", "📍 手动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", "🇳🇱 NL 荷兰"]
@@ -291,6 +295,12 @@ rule-providers:
     format: mrs
     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geoip/bilibili.mrs
     path: "./rule_provider/bilibili_ip.mrs"
+  instagram_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/instagram.mrs
+    path: "./rule_provider/instagram_site.mrs"  
   youtube_site_mrs:
     type: http
     behavior: domain
@@ -408,6 +418,7 @@ rules:
   - RULE-SET,bilibili_site_mrs,DIRECT
   - RULE-SET,bilibili_ip_mrs,DIRECT,no-resolve
   - "RULE-SET,AI,🤖 AI"
+  - "RULE-SET,instagram_site_mrs,🦄 Instagram"
   - "RULE-SET,twitter_site_mrs,💋 X"
   - "RULE-SET,twitter_ip_mrs,💋 X,no-resolve"
   - "RULE-SET,telegram_site_mrs,📲 Telegram"
