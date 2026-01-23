@@ -1,4 +1,6 @@
-DOMAIN,lite.cn2gias.uk
-DOMAIN-SUFFIX,cn2gias.uk
+payload:
+  - '+.lite.cn2gias.uk'
+  - '+.cn2gias.uk'
+
 
 
