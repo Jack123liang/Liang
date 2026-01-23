@@ -1,7 +1,5 @@
-DOMAIN,
-DOMAIN-SUFFIX,
-payload:
-  - lyrebirdemby.com
-  - faemby.vip
+DOMAIN-SUFFIX,lyrebirdemby.com
+DOMAIN-SUFFIX,faemby.vip
+
 
 
