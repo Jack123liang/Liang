@@ -1,5 +1,4 @@
-# 内容：CC
-DOMAIN-SUFFIX,coemn.com
-DOMAIN-SUFFIX,carryz.net
-DOMAIN-SUFFIX,embycc.link
-
+payload:
+  - coemn.com
+  - carryz.net
+  - embycc.link
