@@ -1,3 +1,2 @@
-# 域名关键字匹配
-# 域名后缀匹配
-DOMAIN-SUFFIX,embyplus.org
+payload:
+  - embyplus.org
