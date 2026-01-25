@@ -478,7 +478,10 @@ dns:
   - https://dns.alidns.com/dns-query
   respect-rules: false
   fake-ip-filter:
-  - geosite:cn
+  - "*.lan"
+  - "*.local"
+  - "+.mmstat.com"
+  - "+.youku.com"
   fallback:
   - 8.8.8.8
   - 8.8.4.4
