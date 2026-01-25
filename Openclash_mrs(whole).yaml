@@ -422,10 +422,46 @@ dns:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
   fake-ip-filter:
+  # --- 基础局域网与本地域名 (必须保留) ---
   - "*.lan"
   - "*.local"
+  - "localhost.ptlogin2.qq.com" # 解决腾讯系网页登录问题
+  - "router.asus.com"          # 路由器管理地址示例
+  - "*.linksys.com"
+  - "*.msftconnecttest.com"    # 微软联网检测
+  - "*.msftncsi.com"           # 微软联网检测
+
+  # --- 视频网站全家桶 (解决 fetch failed/CDN 慢问题) ---
+  # 优酷与阿里系
   - "+.mmstat.com"
   - "+.youku.com"
+  - "+.ykimg.com"
+  # 腾讯视频
+  - "+.video.qq.com"
+  - "+.v.qq.com"
+  - "+.vv.video.qq.com"
+  # 哔哩哔哩
+  - "+.bilibili.com"
+  - "+.hdslb.com"
+  - "+.mcdn.bilivideo.cn"
+  # 爱奇艺
+  - "+.iqiyi.com"
+  - "+.qy.net"
+  - "+.71.am"
+  # 芒果TV
+  - "+.mgtv.com"
+  - "+.hunantv.com"
+
+  # --- 常见国产设备服务 (防止连接超时) ---
+  - "+.miui.com"               # 小米更新
+  - "+.xiaomi.com"
+  - "+.provo.vnet.huawei.com"   # 华为联网检测
+  - "+.push.apple.com"         # 苹果推送 (解决推送延迟)
+  
+  # --- 常用测速与下载 ---
+  - "*.speedtest.net"
+  - "*.fast.com"
+
   respect-rules: false
 tproxy-port: 7895
 external-controller: 0.0.0.0:9090
