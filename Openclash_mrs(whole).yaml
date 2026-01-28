@@ -444,6 +444,16 @@ dns:
   - "+.bilibili.com"
   - "+.hdslb.com"
   - "+.mcdn.bilivideo.cn"
+  # 新增：韩剧TV (韩小圈) 相关 ---
+  - hxqapi.hiyun.tv
+  - +.hiyun.tv
+  - hxqapi.zmdcq.com
+  - +.zmdcq.com
+  #  新增：人人视频 / 人人电波相关 ---
+  - +.rrtv.cn
+  - +.rr.tv
+  - +.rrevery.com
+  - +.rrenren.com
   # 爱奇艺
   - "+.iqiyi.com"
   - "+.qy.net"
