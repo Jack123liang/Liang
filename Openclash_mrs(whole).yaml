@@ -47,7 +47,10 @@ proxy-groups:
       - "🇸🇬 SG 新加坡"
       - "🇨🇳 TW 台湾"
       - DIRECT
-
+  - name: "🐩 Special"
+    type: select
+    proxies: [DIRECT, "🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", "🇳🇱 NL 荷兰"]
+  
   - name: "🐰 Sntp"
     type: select
     proxies: ["🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", "🇳🇱 NL 荷兰"]
@@ -181,6 +184,13 @@ proxy-groups:
     tolerance: 50
 # 规则集定义
 rule-providers:
+  Special:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    path: "./rule_provider/Special.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Special.yaml
   Sntp:
     type: http
     behavior: domain
@@ -373,6 +383,7 @@ rule-providers:
 
 # 规则部分（确保 Emoji 与上方完全一致）
 rules:
+  - "RULE-SET,Special,🐩 Special"
   - "RULE-SET,Sntp,🐰 Sntp"
   - "RULE-SET,FeiyueChat,🕊️️ 非越"
   - "RULE-SET,feiyuecaihong,🦋 飞跃彩虹"
@@ -450,10 +461,10 @@ dns:
   - hxqapi.zmdcq.com
   - +.zmdcq.com
   #  新增：人人视频 / 人人电波相关 ---
-  - +.rrtv.cn
-  - +.rr.tv
-  - +.rrevery.com
-  - +.rrenren.com
+  - 'api.rrmj.plus'
+  - 'm.yichengwlkj.com'
+  - '+.rrmj.plus'     
+  - '+.yichengwlkj.com'
   # 爱奇艺
   - "+.iqiyi.com"
   - "+.qy.net"
