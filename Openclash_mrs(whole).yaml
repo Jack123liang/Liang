@@ -135,7 +135,11 @@ proxy-groups:
   - name: "🎾 Speedtest"
     type: select
     proxies: ["⚡ 自动选择", "📍 手动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", DIRECT]
-
+    
+  - name: "🎄 Vercel"
+    type: select
+    proxies: ["⚡ 自动选择", "📍 手动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", DIRECT]
+    
   - name: "🐟 漏网之鱼"
     type: select
     proxies: ["🚀 选择代理", "⚡ 自动选择", "📍 手动选择", "🇺🇸 US 美国", "🇭🇰 HK 香港", "🇯🇵 JP 日本", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", DIRECT]
@@ -191,6 +195,13 @@ rule-providers:
     interval: 86400
     path: "./rule_provider/Special.yaml"
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Special.yaml
+  Vercel:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    path: "./rule_provider/Vercel.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Vercel.yaml
   Sntp:
     type: http
     behavior: domain
@@ -411,6 +422,7 @@ rules:
   - "RULE-SET,disney_site_mrs,🥳 Disney+"
   - "RULE-SET,github_site_mrs,🎖️ Github"
   - "RULE-SET,speedtest_site_mrs,🎾 Speedtest"
+  - "RULE-SET,Vercel,🎄 Vercel" 
   - RULE-SET,apple_site_mrs, Apple
   - RULE-SET,apple_ip_mrs, Apple,no-resolve
   - RULE-SET,cn_site_mrs,DIRECT
