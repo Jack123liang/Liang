@@ -461,6 +461,7 @@ dns:
   - hxqapi.zmdcq.com
   - +.zmdcq.com
   #  新增：人人视频 / 人人电波相关 ---
+  - '+.mij.rip'
   - 'api.rrmj.plus'
   - 'm.yichengwlkj.com'
   - '+.rrmj.plus'     
