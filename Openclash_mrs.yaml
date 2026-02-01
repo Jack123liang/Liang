@@ -12,7 +12,7 @@ log-level: warning
 proxy-providers:
   一分机场:
     type: http
-    url: https://www.yfjc.xyz/api/v1/client/subscribe?token=203ef91fddbb490bef4afbc5fe33fe3e
+    url: https:
     interval: 86400
     path: "./proxy_provider/yifen.yaml"
     health-check:
