@@ -145,42 +145,42 @@ proxy-groups:
     proxies: ["🚀 选择代理", "⚡ 自动选择", "📍 手动选择", "🇺🇸 US 美国", "🇭🇰 HK 香港", "🇯🇵 JP 日本", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", DIRECT]
 
   # 地区分组定义
-  - name: "🇭🇰 HK 香港"
+  - name: "🇭🇰  香港自动"
     type: url-test
     use: [一分机场]
     filter: "(澳门|🇲🇴|港|🇭🇰|HK|Hong).*([^0-9]|^)0\\.1([^0-9]|$)"
     interval: 120
     tolerance: 50
 
-  - name: "🇺🇸 US 美国"
+  - name: "🇺🇸 美国自动"
     type: url-test
     use: [一分机场]
     filter: "(美国|US|United States|🇺🇸|L\\.A|San Jose).*([^0-9]|^)0\\.1([^0-9]|$)"
     interval: 120
     tolerance: 50
 
-  - name: "🇯🇵 JP 日本"
+  - name: "🇯🇵 日本自动"
     type: url-test
     use: [一分机场]
     filter: "(日本|JP|Japan|🇯🇵|东京|大阪|Tokyo|Osaka).*([^0-9]|^)0\\.1([^0-9]|$)"
     interval: 120
     tolerance: 50
 
-  - name: "🇳🇱 NL 荷兰"
+  - name: "🇳🇱 荷兰自动"
     type: url-test
     use: [一分机场]
     filter: "(荷兰|NL|Netherlands|🇳🇱|阿姆斯特丹|Amsterdam).*([^0-9]|^)0\\.1([^0-9]|$)"
     interval: 120
     tolerance: 50
 
-  - name: "🇸🇬 SG 新加坡"
+  - name: "🇸🇬 狮城自动"
     type: url-test
     use: [一分机场]
     filter: "(新加坡|SG|Singapore|🇸🇬|狮城)"
     interval: 120
     tolerance: 50
 
-  - name: "🇨🇳 TW 台湾"
+  - name: "🇨🇳 台湾自动"
     type: url-test
     use: [一分机场]
     filter: "(台湾|TW|Taiwan|台北|Taipei)"
