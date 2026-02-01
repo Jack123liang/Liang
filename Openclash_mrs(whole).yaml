@@ -523,6 +523,7 @@ rules:
   - "RULE-SET,github_site_mrs,🎖️ Github"
   - "RULE-SET,speedtest_site_mrs,🎾 Speedtest"
   - "RULE-SET,Vercel,🎄 Vercel" 
+  - "RULE-SET,tmdb_site_mrs,🍆 TMDB" 
   - RULE-SET,apple_site_mrs, Apple
   - RULE-SET,apple_ip_mrs, Apple,no-resolve
   - RULE-SET,cn_site_mrs,DIRECT
