@@ -152,6 +152,10 @@ proxy-groups:
     type: select
     proxies: ["⚡ 自动选择", "📍 手动选择", "🇭🇰 香港自动", "🇨🇳 台湾自动", "🇸🇬 狮城自动", "🇯🇵 日本自动", "🇺🇸 美国自动", DIRECT]
     
+  - name: "🍆 TMDB"
+    type: select
+    proxies: ["🚀 选择代理", "⚡ 自动选择", "📍 手动选择", "🔯 美国节点", "♻️ 美国故转", "🇺🇸 美国自动", "🔯 香港节点", "♻️ 香港故转", "🇭🇰 香港自动", "🔯 日本节点", "♻️ 日本故转", "🇯🇵 日本自动", "🇨🇳 台湾自动", "🇸🇬 狮城自动", DIRECT]
+
   - name: "🐟 漏网之鱼"
     type: select
     proxies: ["🚀 选择代理", "⚡ 自动选择", "📍 手动选择", "🔯 美国节点", "♻️ 美国故转", "🇺🇸 美国自动", "🔯 香港节点", "♻️ 香港故转", "🇭🇰 香港自动", "🔯 日本节点", "♻️ 日本故转", "🇯🇵 日本自动", "🇨🇳 台湾自动", "🇸🇬 狮城自动", DIRECT]
@@ -439,6 +443,12 @@ rule-providers:
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
     path: "./rule_provider/github_site.mrs"
+  tmdb_site_mrs:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tmdb.mrs
+    path: "./rule_provider/tmdb_site.mrs"
   twitter_site_mrs:
     type: http
     behavior: domain
