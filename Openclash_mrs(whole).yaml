@@ -152,6 +152,10 @@ proxy-groups:
     type: select
     proxies: ["⚡ 自动选择", "📍 手动选择", "🇭🇰 香港自动", "🇨🇳 台湾自动", "🇸🇬 狮城自动", "🇯🇵 日本自动", "🇺🇸 美国自动", DIRECT]
     
+  - name: "🍳 Trakt"
+    type: select
+    proxies: ["🚀 选择代理", "⚡ 自动选择", "📍 手动选择", "🔯 美国节点", "♻️ 美国故转", "🇺🇸 美国自动", "🔯 香港节点", "♻️ 香港故转", "🇭🇰 香港自动", "🔯 日本节点", "♻️ 日本故转", "🇯🇵 日本自动", "🇨🇳 台湾自动", "🇸🇬 狮城自动", DIRECT]
+    
   - name: "🍆 TMDB"
     type: select
     proxies: ["🚀 选择代理", "⚡ 自动选择", "📍 手动选择", "🔯 美国节点", "♻️ 美国故转", "🇺🇸 美国自动", "🔯 香港节点", "♻️ 香港故转", "🇭🇰 香港自动", "🔯 日本节点", "♻️ 日本故转", "🇯🇵 日本自动", "🇨🇳 台湾自动", "🇸🇬 狮城自动", DIRECT]
@@ -449,6 +453,13 @@ rule-providers:
     format: mrs
     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tmdb.mrs
     path: "./rule_provider/tmdb_site.mrs"
+  Trakt:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    path: "./rule_provider/Trakt.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Trakt.yaml
   twitter_site_mrs:
     type: http
     behavior: domain
@@ -523,6 +534,7 @@ rules:
   - "RULE-SET,github_site_mrs,🎖️ Github"
   - "RULE-SET,speedtest_site_mrs,🎾 Speedtest"
   - "RULE-SET,Vercel,🎄 Vercel" 
+  - "RULE-SET,Trakt,🍳 Trakt" 
   - "RULE-SET,tmdb_site_mrs,🍆 TMDB" 
   - RULE-SET,apple_site_mrs, Apple
   - RULE-SET,apple_ip_mrs, Apple,no-resolve
