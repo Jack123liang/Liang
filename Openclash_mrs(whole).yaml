@@ -186,6 +186,90 @@ proxy-groups:
     filter: "(台湾|TW|Taiwan|台北|Taipei)"
     interval: 120
     tolerance: 50
+    
+  - name: "🔯 香港节点"
+    type: url-test
+    use: [一分机场]
+    filter: "(澳门|🇲🇴|港|🇭🇰|HK|Hong).*([^0-9]|^)0\\.1([^0-9]|$)"
+    interval: 120
+    tolerance: 50
+
+  - name: "🔯 美国节点"
+    type: url-test
+    use: [一分机场]
+    filter: "(美国|US|United States|🇺🇸|L\\.A|San Jose).*([^0-9]|^)0\\.1([^0-9]|$)"
+    interval: 120
+    tolerance: 50
+
+  - name: "🔯 日本节点"
+    type: url-test
+    use: [一分机场]
+    filter: "(日本|JP|Japan|🇯🇵|东京|大阪|Tokyo|Osaka).*([^0-9]|^)0\\.1([^0-9]|$)"
+    interval: 120
+    tolerance: 50
+
+  - name: "🔯 荷兰节点"
+    type: url-test
+    use: [一分机场]
+    filter: "(荷兰|NL|Netherlands|🇳🇱|阿姆斯特丹|Amsterdam).*([^0-9]|^)0\\.1([^0-9]|$)"
+    interval: 120
+    tolerance: 50
+
+  - name: "🔯 狮城节点"
+    type: url-test
+    use: [一分机场]
+    filter: "(新加坡|SG|Singapore|🇸🇬|狮城)"
+    interval: 120
+    tolerance: 50
+
+  - name: "🔯 台湾节点"
+    type: url-test
+    use: [一分机场]
+    filter: "(台湾|TW|Taiwan|台北|Taipei)"
+    interval: 120
+    tolerance: 50
+    
+  - name: "♻️ 香港故转"
+    type: url-test
+    use: [一分机场]
+    filter: "(澳门|🇲🇴|港|🇭🇰|HK|Hong).*([^0-9]|^)0\\.1([^0-9]|$)"
+    interval: 120
+    tolerance: 50
+
+  - name: "♻️ 美国故转"
+    type: url-test
+    use: [一分机场]
+    filter: "(美国|US|United States|🇺🇸|L\\.A|San Jose).*([^0-9]|^)0\\.1([^0-9]|$)"
+    interval: 120
+    tolerance: 50
+
+  - name: "♻️ 日本故转"
+    type: url-test
+    use: [一分机场]
+    filter: "(日本|JP|Japan|🇯🇵|东京|大阪|Tokyo|Osaka).*([^0-9]|^)0\\.1([^0-9]|$)"
+    interval: 120
+    tolerance: 50
+
+  - name: "♻️ 荷兰故转"
+    type: url-test
+    use: [一分机场]
+    filter: "(荷兰|NL|Netherlands|🇳🇱|阿姆斯特丹|Amsterdam).*([^0-9]|^)0\\.1([^0-9]|$)"
+    interval: 120
+    tolerance: 50
+
+  - name: "♻️ 狮城故转"
+    type: url-test
+    use: [一分机场]
+    filter: "(新加坡|SG|Singapore|🇸🇬|狮城)"
+    interval: 120
+    tolerance: 50
+
+  - name: "♻️ 台湾故转"
+    type: url-test
+    use: [一分机场]
+    filter: "(台湾|TW|Taiwan|台北|Taipei)"
+    interval: 120
+    tolerance: 50
 # 规则集定义
 rule-providers:
   Special:
