@@ -605,11 +605,11 @@ dns:
   - "+.provo.vnet.huawei.com"   # 华为联网检测
   - "+.push.apple.com"         # 苹果推送 (解决推送延迟)
   
-  - '*.emby.media'
-  - '*.trakt.tv'
-  - '*.themoviedb.org'
-  - '*.tmdb.org'
-  - '*.thetvdb.com'
+  - '+.emby.media'
+  - '+.trakt.tv'
+  - '+.themoviedb.org'
+  - '+.tmdb.org'
+  - '+.thetvdb.com'
   - time.*.com           # NTP时间服务
   - ntp.*.com
 
