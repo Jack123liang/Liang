@@ -605,9 +605,13 @@ dns:
   - "+.provo.vnet.huawei.com"   # 华为联网检测
   - "+.push.apple.com"         # 苹果推送 (解决推送延迟)
   
-  # --- 常用测速与下载 ---
-  - "*.speedtest.net"
-  - "*.fast.com"
+  - '*.emby.media'
+  - '*.trakt.tv'
+  - '*.themoviedb.org'
+  - '*.tmdb.org'
+  - '*.thetvdb.com'
+  - time.*.com           # NTP时间服务
+  - ntp.*.com
 
   respect-rules: false
 tproxy-port: 7895
