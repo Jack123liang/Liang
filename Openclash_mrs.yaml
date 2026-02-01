@@ -12,7 +12,7 @@ log-level: warning
 proxy-providers:
   一分机场:
     type: http
-    url: "你的订阅链接"
+    url: https://www.yfjc.xyz/api/v1/client/subscribe?token=203ef91fddbb490bef4afbc5fe33fe3e
     interval: 86400
     path: "./proxy_provider/yifen.yaml"
     health-check:
@@ -47,7 +47,10 @@ proxy-groups:
       - "🇸🇬 SG 新加坡"
       - "🇨🇳 TW 台湾"
       - DIRECT
-
+  - name: "🐩 Special"
+    type: select
+    proxies: [DIRECT, "🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", "🇳🇱 NL 荷兰"]
+    
   - name: "🐰 Sntp"
     type: select
     proxies: ["🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", "🇳🇱 NL 荷兰"]
@@ -68,7 +71,7 @@ proxy-groups:
     type: select
     proxies: ["🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 HK 香港", "🇸🇬 SG 新加坡", "🇺🇸 US 美国", "🇳🇱 NL 荷兰", "🇨🇳 TW 台湾"]
 
-  - name: "🐦‍⬛ 琴鸟"
+  - name: "🐦‍⬛ 我身无拘"
     type: select
     hidden: true
     proxies: [DIRECT, "🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 HK 香港", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", "🇳🇱 NL 荷兰", "🇨🇳 TW 台湾"]
@@ -78,7 +81,7 @@ proxy-groups:
     hidden: true
     proxies: [DIRECT, "🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", "🇳🇱 NL 荷兰"]
 
-  - name: "🍭 Nanflix-US"
+  - name: "🍭 Okemby"
     type: select
     hidden: true
     proxies: [DIRECT, "🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", "🇳🇱 NL 荷兰"]
@@ -104,18 +107,6 @@ proxy-groups:
   - name: "🍀 Google"
     type: select
     proxies: ["🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", "🇳🇱 NL 荷兰"]
-
-  - name: "📺 TVB"
-    type: select
-    proxies: ["🇭🇰 HK 香港", "🚀 选择代理", "📍 手动选择", "⚡ 自动选择", DIRECT]
-
-  - name: "🍒 Pixman Proxy"
-    type: select
-    proxies: ["⚡ 自动选择", "🚀 选择代理", "📍 手动选择"]
-
-  - name: "🍇 Pixman Direct"
-    type: select
-    proxies: [DIRECT]
 
   - name: "📲 Telegram"
     type: select
@@ -145,6 +136,10 @@ proxy-groups:
     type: select
     proxies: ["⚡ 自动选择", "📍 手动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", DIRECT]
 
+  - name: "🎄 Vercel"
+    type: select
+    proxies: ["⚡ 自动选择", "📍 手动选择", "🇭🇰 HK 香港", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", "🇯🇵 JP 日本", "🇺🇸 US 美国", DIRECT]
+ 
   - name: "🐟 漏网之鱼"
     type: select
     proxies: ["🚀 选择代理", "⚡ 自动选择", "📍 手动选择", "🇺🇸 US 美国", "🇭🇰 HK 香港", "🇯🇵 JP 日本", "🇨🇳 TW 台湾", "🇸🇬 SG 新加坡", DIRECT]
@@ -193,90 +188,84 @@ proxy-groups:
     tolerance: 50
 # 规则集定义
 rule-providers:
+
+  Special:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    path: "./rule_provider/Special.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Special.yaml
+  Vercel:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    path: "./rule_provider/Vercel.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Vercel.yaml
   Sntp:
     type: http
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
-    path: "./rule_provider/Sntp.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Sntp.list
+    path: "./rule_provider/Sntp.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Sntp.yaml
   FeiyueChat:
     type: http
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
-    path: "./rule_provider/FeiyueChat.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/FeiyueChat.list
+    path: "./rule_provider/FeiyueChat.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/FeiyueChat.yaml
   feiyuecaihong:
     type: http
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
-    path: "./rule_provider/Feiyuecaihong.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Feiyuecaihong.list
+    path: "./rule_provider/Feiyuecaihong.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Feiyuecaihong.yaml
   CC:
     type: http
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
-    path: "./rule_provider/CC.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/CC.list
+    path: "./rule_provider/CC.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/CC.yaml
   Embyplus:
     type: http
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
-    path: "./rule_provider/Embyplus.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Embyplus.list
+    path: "./rule_provider/Embyplus.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Embyplus.yaml
   Lyrebird:
     type: http
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
-    path: "./rule_provider/Lyrebird.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Lyrebird.list
+    path: "./rule_provider/Lyrebird.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Lyrebird.yaml
   Magpie:
     type: http
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
-    path: "./rule_provider/Magpie.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Magpie.list
-  Nanflix-US:
+    path: "./rule_provider/Magpie.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Magpie.yaml
+  Okemby:
     type: http
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
-    path: "./rule_provider/Nanflix-US.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Nanflix-US.list
-  AI:
+    path: "./rule_provider/Okemby.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Okemby.yaml  
+  AI_site_mrs:
     type: http
-    behavior: classical
-    format: text
+    behavior: domain
+    format: mrs
     interval: 86400
-    path: "./rule_provider/AI.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/AI.list
-  Pixman Direct:
-    type: http
-    behavior: classical
-    format: text
-    interval: 86400
-    path: "./rule_provider/PixmanDirect.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/PixmanDirect.list
-  Pixman Proxy:
-    type: http
-    behavior: classical
-    format: text
-    interval: 86400
-    path: "./rule_provider/PixmanProxy.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/PixmanProxy.list
-  TVB:
-    type: http
-    behavior: classical
-    format: text
-    interval: 86400
-    path: "./rule_provider/TVB.list"
-    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/TVB.list
+    path: "./rule_provider/AI_site.mrs"
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs
   xiaohongshu_site_mrs:
     type: http
     behavior: domain
@@ -406,24 +395,26 @@ rule-providers:
 
 # 规则部分（确保 Emoji 与上方完全一致）
 rules:
+  - "RULE-SET,Special,🐩 Special"
   - "RULE-SET,Sntp,🐰 Sntp"
   - "RULE-SET,FeiyueChat,🕊️️ 非越"
   - "RULE-SET,feiyuecaihong,🦋 飞跃彩虹"
   - "RULE-SET,CC,🐔 CC"
   - "RULE-SET,Embyplus,🐧 纸片人小站"
-  - "RULE-SET,Lyrebird,🐦‍⬛ 琴鸟"
+  - "RULE-SET,Lyrebird,🐦‍⬛ 我身无拘"
   - "RULE-SET,Magpie,🦜 喜鹊"
-  - "RULE-SET,Nanflix-US,🍭 Nanflix-US"
+  - "RULE-SET,Okemby,🍭 Okemby"
   - RULE-SET,xiaohongshu_site_mrs,DIRECT
   - RULE-SET,bilibili_site_mrs,DIRECT
   - RULE-SET,bilibili_ip_mrs,DIRECT,no-resolve
-  - "RULE-SET,AI,🤖 AI"
+  - "RULE-SET,AI_site_mrs,🤖 AI"
   - "RULE-SET,instagram_site_mrs,🦄 Instagram"
+  - DOMAIN-KEYWORD,facebook,🦄 Instagram
   - "RULE-SET,twitter_site_mrs,💋 X"
   - "RULE-SET,twitter_ip_mrs,💋 X,no-resolve"
   - "RULE-SET,telegram_site_mrs,📲 Telegram"
   - "RULE-SET,telegram_ip_mrs,📲 Telegram,no-resolve"
-  - RULE-SET,youtube_site_mrs,▶️ YouTube
+  - "RULE-SET,youtube_site_mrs,▶️ YouTube"
   - "RULE-SET,google_site_mrs,🍀 Google"
   - "RULE-SET,google_ip_mrs,🍀 Google,no-resolve"
   - "RULE-SET,spotify_site_mrs,🎼 Spotify"
@@ -432,36 +423,92 @@ rules:
   - "RULE-SET,disney_site_mrs,🥳 Disney+"
   - "RULE-SET,github_site_mrs,🎖️ Github"
   - "RULE-SET,speedtest_site_mrs,🎾 Speedtest"
-  - "RULE-SET,TVB,📺 TVB"
-  - "RULE-SET,Pixman Direct,🍇 Pixman Direct"
-  - "RULE-SET,Pixman Proxy,🍒 Pixman Proxy"
+  - "RULE-SET,Vercel,🎄 Vercel" # 可选：如果想让所有 Vercel 托管的项目都走代理
   - RULE-SET,apple_site_mrs, Apple
   - RULE-SET,apple_ip_mrs, Apple,no-resolve
   - RULE-SET,cn_site_mrs,DIRECT
   - RULE-SET,cn_ip_mrs,DIRECT,no-resolve
   - GEOIP,LAN,DIRECT,no-resolve
   - "MATCH,🐟 漏网之鱼"
-
-# DNS 与 Rule Providers 保持原样...
-
 dns:
-  enable: true
+  enable: true  # 关键
   listen: 0.0.0.0:7874
   ipv6: false
+  # Apple TV 场景强烈推荐
   enhanced-mode: fake-ip
+  # Fake IP 池（保持默认即可）
   fake-ip-range: 198.18.0.1/16
+  # 关键：局域网与 Apple 发现机制必须绕过 Fake IP
+  fake-ip-filter:
+    - +.lan
+    - +.local
+    - localhost
+    - '*.localdomain'
+    - '*.home.arpa'
+    - +.apple.com
+    - +.icloud.com
+    - +.mzstatic.com
+    - +.mmstat.com
+    - +.youku.com
+    - +.ykimg.com
+    - +.v.qq.com
+    - +.video.qq.com
+    - +.vv.video.qq.com
+    - +.iqiyi.com
+    - +.qy.net
+    - +.71.am
+    - +.bilivideo.com
+    - +.bilivideo.cn
+    - +.bilibili.com
+    - +.acgvideo.com
+    - +.hdslb.com
+    - +.mgtv.com
+    - +.hunantv.com
+        # --- 新增：韩剧TV (韩小圈) 相关 ---
+    - hxqapi.hiyun.tv
+    - +.hiyun.tv
+    - hxqapi.zmdcq.com
+    - +.zmdcq.com
+      # --- 人人视频/人人影视 ---
+    - 'api.rrmj.plus'
+    - 'm.yichengwlkj.com'
+    - '+.rrmj.plus'     
+    - '+.yichengwlkj.com'
+    - '+.mij.rip' 
+    
+    - '*.emby.media'
+    - '*.themoviedb.org'
+    - '*.tmdb.org'
+    - '*.thetvdb.com'
+    - time.*.com           # NTP时间服务
+    - ntp.*.com
+ 
+  # 系统兜底 DNS（DoH 不可用时使用）
   default-nameserver:
   - 119.29.29.29
   - 223.5.5.5
   nameserver:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
-  fake-ip-filter:
-  - "*.lan"
-  - "*.local"
-  - "+.mmstat.com"
-  - "+.youku.com"
+
+
   respect-rules: false
+  # 关键点：在 fallback-filter 中确保这些域名能正确命中海外解析    - '*.themoviedb.org'
+
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 192.168.0.0/16     # 保护局域网内 NAS 流量
+      - 224.0.0.0/4        # 投屏协议必备
+      - 240.0.0.0/4
 tproxy-port: 7895
 external-controller: 0.0.0.0:9090
 secret: vjT4uv8y
