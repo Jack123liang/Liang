@@ -1,3 +1,6 @@
 payload:
   - 'danmu-api-henna-chi.vercel.app'
   - '+.vercel.app'
+  - 'vercel-dash-alpha.vercel.sh'
+  - '+.vercel.com'
+  - '+.vercel.sh'
