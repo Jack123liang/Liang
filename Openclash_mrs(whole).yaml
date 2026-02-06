@@ -93,6 +93,11 @@ proxy-groups:
     hidden: true
     proxies: [DIRECT, "🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 香港自动", "🇨🇳 台湾自动", "🇸🇬 狮城自动", "🇯🇵 日本自动", "🇺🇸 美国自动", "🇳🇱 荷兰自动"]
 
+ - name: "🍅 Okemby"
+    type: select
+    hidden: true
+    proxies: [DIRECT, "🚀 选择代理", "📍 手动选择", "⚡ 自动选择", "🇭🇰 香港自动", "🇨🇳 台湾自动", "🇸🇬 狮城自动", "🇯🇵 日本自动", "🇺🇸 美国自动", "🇳🇱 荷兰自动"]
+    
   - name: "🍭 Nanflix-US"
     type: select
     hidden: true
@@ -349,6 +354,13 @@ rule-providers:
     interval: 86400
     path: "./rule_provider/Magpie.yaml"
     url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Magpie.yaml
+  Okemby:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    path: "./rule_provider/Okemby.yaml"
+    url: https://raw.githubusercontent.com/Jack123liang/Liang/refs/heads/main/Okemby.yaml
   Nanflix-US:
     type: http
     behavior: domain
@@ -513,6 +525,7 @@ rules:
   - "RULE-SET,Embyplus,🐧 纸片人小站"
   - "RULE-SET,Lyrebird,🐦‍⬛ 我身无拘"
   - "RULE-SET,Magpie,🦜 喜鹊"
+  - "RULE-SET,Okemby,🍅 Okemby"
   - "RULE-SET,Nanflix-US,🍭 Nanflix-US"
   - RULE-SET,xiaohongshu_site_mrs,DIRECT
   - RULE-SET,bilibili_site_mrs,DIRECT
