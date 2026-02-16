@@ -517,6 +517,8 @@ rule-providers:
 
 # 规则部分（确保 Emoji 与上方完全一致）
 rules:
+  - DOMAIN-SUFFIX,local,DIRECT
+  - GEOIP,LAN,DIRECT,no-resolve
   - "RULE-SET,Special,🐩 Special"
   - "RULE-SET,Sntp,🐰 Sntp"
   - "RULE-SET,FeiyueChat,🕊️️ 非越"
@@ -553,7 +555,6 @@ rules:
   - RULE-SET,apple_ip_mrs, Apple,no-resolve
   - RULE-SET,cn_site_mrs,DIRECT
   - RULE-SET,cn_ip_mrs,DIRECT,no-resolve
-  - GEOIP,LAN,DIRECT,no-resolve
   - "MATCH,🐟 漏网之鱼"
 
 # DNS 与 Rule Providers 保持原样...
