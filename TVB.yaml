@@ -32,3 +32,6 @@ payload:
   - '+. cloudflare.com'
   - '+. z2u.com'
   - '+. amazonaws.com'
+  - '+. hinet.net'
+  - '+. ofiii.com'
+  - '+. thetvapp.to'
